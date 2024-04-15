@@ -1,0 +1,38 @@
+.title {background-color:aqua;}
+.title h1 {color:tomato;}
+.title .txt_wrap {background-color:lime;}
+.title .txt_wrap .txt_1 {background-color: cadetblue;}
+.title .txt_wrap .txt_1 .sub_title {color: blue;}
+.title .txt_wrap .txt_1 .name {background-color:yellow;}
+/* 선택자 연습2 */
+#weather {background-color:yellow;}
+#weather h1 {color:blueviolet;}
+#weather .area {color:skyblue;}
+#weather .temperature {color: red;}
+#weather p {color:blue;}
+#weather .sub_title {background-color: aquamarine;}
+#weather .humidity {color:yellowgreen;}
+#weather .dust {color:orange;}
+#weather .result {color:orangered;}
+/* 선택자 연습3 */
+#news {background-color:aquamarine;}
+#news > a {background-color: burlywood;}
+#news .box {background-color: rgb(190, 195, 196);}
+#news .box a {color:yellow} /* inline 요소로 되어 있어서 백그라운드 컬러가 적용되지 않음 */
+#news .box a h2 {color:cornflowerblue;}
+#news .box a p {color:cornflowerblue;}
+#news > p {color:blue;}
+/* 선택자 연습4 */
+#papago {background-color: yellowgreen;}
+#papago nav {background-color: aquamarine;}
+#papago nav a {background-color: yellow;}
+#papago main {background-color: beige;}
+#papago main h1 {background-color: yellow;}
+#papago main h1 a {color: blueviolet;}
+#papago main > a {color:chocolate}
+#papago > a {background-color: aquamarine;}
+/* css 디자인 */
+/* #top {background-color:aqua;}
+#top main {background-color:yellow;}
+#top main h1 {background-color:lime;}
+#top main p {} */
