@@ -1,0 +1,14 @@
+main {
+    font-family:"Noto Sans KR", "맑은 고딕", sans-serif;
+}
+main .first {}
+main .first h1 {
+    font-family: Jua, sans-serif; /* 한글 또는 공백이 있을 때는 ""(따옴표)가 반드시 들어갈 것 */
+}
+main .first p {font-family:"Nanum Pen Script", sans-serif;}
+main .first p em {}
+main .second {}
+main .second h1 {
+    font-family:"Nanum Myeongjo", serif;
+}
+main .second p {font-family:"Single Day", sans-serif;}
