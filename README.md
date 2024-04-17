@@ -55,3 +55,19 @@
 * RGB 웹 색상 기준으로 색상을 섞을 수록 밝아진다.
 * #HEX #000000 => #000, #FF00CC => #F0C
 * rgba(red, green ,blue , alpha) *최대색상 255
+## box css
+### display
+* `block, inline, inline-block`
+* 특정 태그가 화면에 어떻게 표시될지 지정하는 속성
+* `block` : 새로운 행, 크기, 여백 인식
+* `inline` : 내용만큼 크기 인식 (그 외 크기 인식 불가능)
+* `inline-block` : 내용만큼 크기 인식 (크기 추가설정 가능), 옆으로 정렬
+### box-sizing
+* `box-sizing:border-box`
+* 요소오의 너비와 높이를 계산할 때 테두리, 여백 (padding)까지 포함해서 계산하는 속성
+* 속성 미적용 시 : w100+h100+(padding-top20) = 100x120
+* 속성 적용 시 : w100+h100+(padding-top20) = 100x100
+### width, height
+* 요소의 너비와 높이
+* 절대값px, 상대값%, 화면 상대값 vw, vh
+* 상대값 처리 0~100% 사이 값만 사용한다.
