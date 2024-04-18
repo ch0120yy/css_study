@@ -1,0 +1,51 @@
+/* #03c75a */
+main {font-family:"Noto Sans KR", sans-serif;}
+main h1, main h1 span {
+    font-size: 3.125rem;
+    font-weight: 700;
+}
+main h1 {
+    line-height: 1.2;  /* 120% */
+    letter-spacing: -0.4px; /* -4% */
+    padding-bottom: 48px;
+}
+main h1 span {color:#03C75A}
+main p {letter-spacing: -0.4px;}
+main .first {font-size: 1.5rem; line-height: 1.2;
+    padding-bottom: 48px;
+}
+main .second {
+    font-size:1.25rem;line-height: 1.7; /* px을 rem으로 변환한 값 */
+    padding-bottom: 50px;
+    
+}
+main .first .user {font-size: 1.5rem; color:#03C75A;}
+main .second a {font-size:1.25rem; text-decoration: underline;} /* 밑줄 넣기 */
+main h2 {font-size: 1.563rem; padding-bottom: 22px;}
+main h2 span  {font-size: 1.25rem;}
+main .list {
+    border-top: 3px solid #000;
+    width: 930px;
+}
+main .list thead {background-color: #f5f5f5;}
+main .list thead tr {}
+main .list thead tr th {}
+main .list tbody {
+    /* border-top:1px solid #aaa;
+    border-bottom:1px solid #aaa; */
+    border: 1px solid #aaa; /* 색 변경에 좀 더 유리함 */
+    border-left: 0; border-right: 0;
+}
+main .list tbody tr {}
+main .list tbody tr td {}
+main .list tbody tr td em {color: #03C75A;}
+/* main .list thead tr .align,
+main .list tbody tr .align {text-align: center;}  */
+main .list tr .align {text-align: center;}
+main .list tr * {padding-top:15px; padding-bottom:15px;}
+main .detail_view {
+    font-size: 1.25rem; line-height:1.5rem;;
+    display: block; width: 930px;
+    text-align: right; padding-top: 11px; padding-bottom: 130px;}
+main .btn {}
+main .btn a {font-size:1.25rem; line-height:1.5rem;}
