@@ -2,7 +2,7 @@
 * {box-sizing: border-box;}
 body,html,
 h1,h2,h3,h4,h5,h6,
-p,ul,ol,li,dl,dt,dd,
+p,ul,ol,li,dl,dt,dd,table,tr,td,th,thead,tbody,tfoot,
 div,header,nav,aside,article,section,footer,figure,
 address,blockquote,video,iframe,hr, /* block태그 끝 */
 span,em,strong,q,a,sub,sup,details,figcaption,summary, /* inline태그 시작 */
@@ -14,3 +14,5 @@ time,s,del,code,mark,img {
 }
 a {color:#000; text-decoration:none;}
 ul,ol,li {list-style: none;}
+table, tr, td, th {border-collapse: collapse;}
+th {text-align: left;}
