@@ -7,17 +7,16 @@ main h1, main h1 span {
 main h1 {
     line-height: 1.2;  /* 120% */
     letter-spacing: -0.4px; /* -4% */
-    padding-bottom: 48px;
+    margin-bottom: 48px;
 }
 main h1 span {color:#03C75A}
 main p {letter-spacing: -0.4px;}
 main .first {font-size: 1.5rem; line-height: 1.2;
-    padding-bottom: 48px;
+    margin-bottom: 48px;
 }
 main .second {
     font-size:1.25rem;line-height: 1.7; /* px을 rem으로 변환한 값 */
-    padding-bottom: 50px;
-    
+    margin-bottom: 50px;
 }
 main .first .user {font-size: 1.5rem; color:#03C75A;}
 main .second a {font-size:1.25rem; text-decoration: underline;} /* 밑줄 넣기 */
@@ -44,8 +43,23 @@ main .list tbody tr .align {text-align: center;}  */
 main .list tr .align {text-align: center;}
 main .list tr * {padding-top:15px; padding-bottom:15px;}
 main .detail_view {
-    font-size: 1.25rem; line-height:1.5rem;;
-    display: block; width: 930px;
-    text-align: right; padding-top: 11px; padding-bottom: 130px;}
-main .btn {}
-main .btn a {font-size:1.25rem; line-height:1.5rem;}
+    font-size: 1.25rem; line-height:1.5rem;
+    font-weight: 400;
+    text-decoration: underline;
+    /* a태그는 inline, block 특징을 모두 가질 수 있지만 고유한 기본 속성은 inline이기 때문에 표시 속성 display 명령으로 block으로 변경하지 않는 한 크기, 여백을 제대로 인식하지 못한다. */
+    width: 930px; /* a가 inline일 때 적용되지 않는 속성 */
+    display: inline-block; /* 위 문제 해결 (block도 가능함) */
+    text-align: right; padding-top: 10px; padding-bottom: 130px;}
+main .btn {width: 930px; text-align: center;}
+main .btn a {
+    font-weight: 400;
+    width: 178px; /* <- 버튼의 너비 혹은 높이를 통일할 때 너비값을 넣고 */ 
+    /* padding-left: 40px; padding-right: 40px; */ /* 글자 수에 따라 너비가 유연하게 변경되길 원하면 padding 값을 넣어줌 */
+    /* padding-top: 20px; height: 64px; */
+    display: inline-block; /* text-align 값을 넣어둬서 여기서는 block을 쓰면 안 됨 */
+    line-height: 64px; /* 글자가 한 줄일 때 높이가 정해진 레이아웃에서 수직 중앙으로 배치하려는 경우 px단위를 사용해서 적용 */
+    background-color: #03C75A;
+    color: #fff; border-radius: 30px;
+    font-size:1.25rem;
+}
+main .btn .home {margin-right: 15px;}
