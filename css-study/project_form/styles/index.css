@@ -1,0 +1,54 @@
+main {
+    text-align: left;
+    width: 1024px;
+    margin: 84px 0 115px 262px;
+    letter-spacing: -0.2px;
+}
+main h1 {
+    font-size: 4.375rem; font-weight: 900;
+    line-height: 101px;
+    margin-bottom: 25px;
+}
+main p {
+    font-size: 1.25rem; 
+    line-height: 29px;
+    margin-bottom: 57px;
+}
+main #login_frm {}
+main #login_frm fieldset {}
+main #login_frm fieldset .skip {}
+main #login_frm fieldset dl {}
+main #login_frm fieldset dl dt {
+    font-size: 1.875rem; font-weight: 700;
+    margin-bottom: 18px;
+}
+main #login_frm fieldset dl dd {}
+main #login_frm fieldset dl dd input{}
+/* 속성선택자 적용은 아래로 */
+main #login_frm input[type*=em],
+main #login_frm input[type^=pas] {
+    width: 500px; line-height: 53px;
+    border-radius: 10px;
+    border:1px solid #AAAAAA;
+    margin-bottom: 38px;
+    padding-left: 15px;
+}
+main #login_frm fieldset h2 {
+    font-size: 1.875rem; font-weight: 700;
+    margin-bottom: 32px;
+}
+main #login_frm fieldset .btn {}
+main #login_frm fieldset .btn button {
+    display: block;
+    background-color:  #222; color: #FFF;
+    font-weight: 700;
+    width: 500px; line-height: 53px;
+    border-radius: 10px; border: 1px solid #AAAAAA;
+}
+main #login_frm fieldset .btn #login_btn {margin-bottom: 18px;}
+main #login_frm fieldset .btn #login_google_btn {
+    background-color: #FFF; color: #222;
+    margin-bottom: 62px;
+}
+main .join_link {color: #555;;}
+main .join_link a {font-weight: 700;}

@@ -1,0 +1,18 @@
+main {
+    font-family: "Noto Sans KR",sans-serif;
+    font-size: 50px;
+}
+main h1 {}
+main p {}
+main .plan_info {}
+main .plan_info thead {}
+main .plan_info thead tr {}
+main .plan_info thead tr th {}
+main .plan_info thead tr th em {}
+main .plan_info tbody {}
+main .plan_info tbody tr {}
+main .plan_info tbody tr th {}
+main .plan_info tbody tr td {}
+main .plan_info tbody tr td .promotion {}
+main .plan_info tbody tr td em {}
+main .plan_info tbody tr td span {}

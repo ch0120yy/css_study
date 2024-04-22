@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0419</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .box {
+            width:300px;height:200px;
+            font-size: 10rem;
+        }
+        .a {background-color: aqua;}
+        .b {
+            background-color: yellow;
+            /* margin: 10px 0 60px 20px; */
+            /* margin:20px 0;  =  20px 0 20px 0; 상하, 좌우 묶어서 쓸 수 있음 */
+            margin: 20px 0 30px; /*  = 20px 0 30px 0; */
+        }
+        .c {
+            background-color: lime;
+            /* margin: 0 0 10px 25px; */
+            
+        }
+        .d {background-color: pink;}
+        .wrap {
+            background-color: skyblue; 
+            display:inline-block;
+            padding:30px 20px 150px;
+            margin: 50px 100px 30px;
+        }
+        .wrap .e {background-color: lightyellow;}
+        .wrap p {
+            text-align: center;
+            font-size: 1.25rem;
+            margin-top: 20px;
+        }
+        .tt {
+            width:500px; background-color: aqua;
+            margin: 30px 0 50px 20px;
+        }
+        .tt td, .tt th {border: 1px solid red;}
+        .tt th {padding: 20px 0;}
+        .tt td {padding: 20px;}
+        .tt thead tr th:nth-child(2) {background-color: yellow;}
+        .tt tbody tr:nth-child(1) td:nth-child(3) {background-color: red; color:white;}
+        .tt tbody tr td:nth-child(1) {background-color: green; color:white}
+        .tt tbody tr:nth-child(1) {border-bottom: 5px solid blue;}
+    </style>
+</head>
+<body>
+    <div class="box a">a</div> <!--  = <div class="box" class="a">a</div> -->
+    <div class="box b">b</div>
+    <div class="box c">c</div>
+    <div class="box d">d</div>
+    <div class="wrap">
+        <div class="box e">e</div>
+        <p>가나다라마바사</p>
+    </div>
+    <hr>
+    <table class="tt">
+        <thead>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+            </tr>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
