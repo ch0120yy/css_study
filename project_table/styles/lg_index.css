@@ -1,0 +1,50 @@
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
+    width: 1024px;
+    margin-top: 196px;
+}
+main h1 {
+    font-size: 2.875rem; font-weight: 700;
+    letter-spacing: -0.2px; line-height: 3.75rem;
+    margin-bottom: 14px;
+}
+main h1 em {font-weight: 300;}
+main p {
+    color: #414141; font-size: 1.125rem;
+    width:940px; text-align: right;
+}
+main .plan_info {
+    color: #414141; width: 940px;
+    margin-left:42px;
+    border-bottom: 2px solid #2C2C2C; border-top: 2px solid #B6B6B6; 
+}
+main .plan_info thead {font-size: 1.625rem; line-height: 80px;border-bottom: 2px solid #2C2C2C;}
+main .plan_info thead tr {}
+main .plan_info thead tr th {
+    color: #414141; text-align: center;
+    font-weight: 700;
+    border: 1px solid #B6B6B6; padding: 7px;
+}
+main .plan_info thead tr th:nth-child(1) {font-weight: 300;}
+main .plan_info thead tr th em {font-size: 1.25rem; line-height: 1.813rem;}
+main .plan_info tbody {letter-spacing: -0.4px;}
+main .plan_info tbody tr {}
+main .plan_info tbody tr th {text-align: center; border: 1px solid #B6B6B6;}
+main .plan_info tbody tr td {border: 1px solid #B6B6B6; padding-top: 15px; padding-bottom: 15px;}
+main .plan_info tbody tr:nth-child(1) td {font-size: 1.5rem; font-weight: 700;}
+main .plan_info tbody tr:nth-child(1) td:nth-child(2) {
+    color:#E51482; font-size: 1.75rem; 
+    width:275px;
+    background-color: aqua;}
+main .plan_info tbody tr td .promotion {
+    background-color: #E51482;
+    font-size: 1.25rem; color: #FFF; line-height: 30px;
+    padding: 0 5px 0 5px; border-radius: 10px;
+}
+main .plan_info tbody tr td em {}
+main .plan_info tbody tr td span {
+    color: #847E81; text-decoration: line-through;
+    font-weight: 700; font-size: 1.125rem;
+}
+main .plan_info tbody tr td span em {font-weight: 300;}
