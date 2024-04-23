@@ -1,0 +1,79 @@
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
+    width: 1024px;
+    margin: 0 auto;
+}
+main > * {
+    width:940px;
+    margin-left: 42px; margin-right: 42px;
+}
+main h1 {
+    font-size: 2.875rem; font-weight: 700;
+    letter-spacing: -0.2px; line-height: 3.75rem;
+    margin-bottom: 14px; padding-top: 100px;
+}
+main h1 em {font-weight: 300;}
+main p {
+    color: #414141; font-size: 1.125rem;
+    text-align: right; font-weight: 300;
+    margin-bottom: 10px;
+}
+main .plan_info {
+    color: #414141; width: 940px;
+    margin-left:42px;
+    border-bottom: 3px solid #2C2C2C; border-top: 3px solid #B6B6B6; 
+}
+main .plan_info thead {
+    font-size: 1.625rem;
+    border-bottom: 3px solid #2C2C2C;
+}
+main .plan_info thead tr {}
+main .plan_info thead tr th {
+    color: #414141; text-align: center;
+    font-weight: 700;
+    border: 1px solid #B6B6B6;
+    padding: 11px;
+}
+main .plan_info thead tr th:nth-child(1) {font-weight: 400; }
+main .plan_info thead tr th em {font-size: 1.25rem;line-height: 1.813rem;}
+main .plan_info tbody {letter-spacing: -0.4px;}
+main .plan_info tbody tr {}
+main .plan_info tbody tr th {text-align: center; border: 1px solid #B6B6B6;}
+main .plan_info tbody tr td {border: 1px solid #B6B6B6; padding-top: 20px; padding-bottom: 20px;}
+main .plan_info thead tr th:nth-child(1), main .plan_info tbody tr th {border-left: 0;}
+main .plan_info thead tr th:nth-child(4), main .plan_info tbody tr td:nth-child(4) {border-right: 0;}
+/* 강조라인 */
+/* 상단 */
+main .plan_info tbody tr td:nth-child(2) {
+    color:#E51482; font-size: 1.5rem; font-weight: 700;
+    border-left: 5px solid #E51482; border-right: 5px solid #E51482;
+}
+/* 중반 */
+main .plan_info thead tr th:nth-child(2) {
+    border: 5px solid #E51482; border-bottom: 0;
+}
+main .plan_info tbody tr:nth-child(5) td:nth-child(2) {border-bottom: 5px solid #E51482;}
+/* e:강조라인 */
+main .plan_info tbody tr:nth-child(1) td {font-size: 1.5rem; font-weight: 700;}
+main .plan_info tbody tr:nth-child(1) td:nth-child(2) {
+    color:#E51482; font-size: 1.75rem;
+    width:275px;
+}
+main .plan_info tbody tr td .promotion {
+    background-color: #E51482;
+    font-size: 1.25rem; color: #FFF;
+    padding: 0 5px 0 5px; border-radius: 10px;
+}
+main .plan_info tbody tr td em {}
+main .plan_info tbody tr td span {
+    color: #847E81; text-decoration: line-through;
+    font-weight: 700; font-size: 1.125rem;
+}
+main .plan_info thead tr th:nth-child(1),
+main .plan_info tbody tr th {
+    background-color: #f7f7f7; width: 276px;
+    font-size: 1.25rem; line-height: 1.813rem; 
+    padding-top: 20px; padding-bottom: 20px;
+}
+main .plan_info tbody tr td span em {font-weight: 300;}

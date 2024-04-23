@@ -1,0 +1,59 @@
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    width: 859px;
+    padding: 60px 56px;
+    background-color:#F5F5F5;
+    text-align: center;
+}
+main p{
+    color:#888;font-size: 1.5rem;
+    letter-spacing: -0.4px; line-height: 2.5rem;
+}
+main .info {
+    color:#000; font-weight: 700;
+    margin: 63px 0 10px;
+}
+main .info_table {
+    width: 100%;
+    margin-bottom: 60px;
+}
+/* 공통적용 */
+main .info_table thead {
+    background-color: #00155E; color: #FFF; border-bottom: 1px solid #000;
+    height: 57px;}
+main .info_table thead tr {}
+main .info_table thead tr th {
+    /* line-height: 57px; padding 갑과 둘 중 하나 사용*/ 
+    padding: 20px 0;
+    text-align: center;
+    border: 1px solid #AAA;
+    font-size: 1.25rem;
+    font-weight: 700; letter-spacing: -0.2px;
+}
+main .info_table tbody {line-height: 1.5rem;}
+main .info_table tbody tr {}
+main .info_table tbody tr th {text-align: center; font-weight: 700;}
+main .info_table tbody tr th,
+main .info_table tbody tr td {
+    font-size: 1.25rem;
+    border: 1px solid #AAA;
+    line-height: 54px;
+}
+main .info_table tbody tr td {}
+main .info_table tbody tr:nth-child(1) td:nth-child(4) {
+    font-weight: 700; line-height: 1.875rem;
+    width: 203px;
+}
+main .info_table tbody tr:nth-child(1) td:nth-child(2) {width: 105px;}
+main .info_table tbody tr:nth-child(1) td:nth-child(3) {width: 207px;}
+/* main .info_table tbody tr:nth-child(even) td:nth-child(1) {width: 105px;}
+main .info_table tbody tr:nth-child(odd) td:nth-child(2) {width: 105px;} */
+/* 해당동 색상 */
+/* main .info_table tbody tr:nth-child(1) td:nth-child(3),
+main .info_table tbody tr:nth-child(3) td:nth-child(3),
+main .info_table tbody tr:nth-child(5) td:nth-child(3),
+main .info_table tbody tr:nth-child(2) td:nth-child(2),
+main .info_table tbody tr:nth-child(4) td:nth-child(2),
+main .info_table tbody tr:nth-child(6) td:nth-child(2) {color: #888;} */
+main .info_table tbody tr:nth-child(even) td:nth-child(2) {color:#888;}
+main .info_table tbody tr:nth-child(odd) td:nth-child(3) {color:#888;}
