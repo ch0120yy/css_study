@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-0422</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* 속성선택자 (form관련 주로 사용) */
+        /* 태그[속성] 태그에 속성이 있을 때 */
+        /* 태그[속성=값] 속성의 값이 이것일 때 */
+        /* 태그[속성^=값] 속성 값이 이것으로 시작할 때 */
+        /* 태그[속성$=값] 속성 값이 이것으로 끝날 때 */
+        /* 태그[속성*=값] 속성 값이 이것을 포함할 때 */
+        #search_frm {background-color: aqua;}
+        #search_frm input[required]{background-color: yellow;}
+        #search_frm input[type=text]{background-color: lime;}
+        #search_frm input[type^=pa]{background-color: pink;}
+        #search_frm input[type$=l]{background-color: blue;}
+        #search_frm input[type*=er]{background-color: coral;}
+    </style>
+</head>
+<body>
+    <h1>form태그</h1>
+    <form action="#" method="get" id="search_frm">
+        <fieldset>
+            <legend class="skip">검색양식</legend>
+            <input type="text" name="user_id" value=""> <!-- 아이디 -->
+            <input type="number" name="item_count" value="1"> <!-- 쇼핑몰 상품수량 -->
+            <input type="password" name="resident_last" value=""> <!-- 주민등록번호 뒷자리 -->
+            <input type="email" name="user_mail_id" value=""> <!-- 메일 아이디 -->
+            <input type="search" name="search_txt"> <!-- 검색창 -->
+            <input type="date" name="reservation_year_month_day" value=""> <!-- 숙소 예약일 --> <!-- 오늘 날짜는 자바스크립트로 처리 -->
+            <input type="time" name="reservation_pickup_time" value="15:00"> <!-- 픽업시간 -->
+            <input type="url" name="portfolio_url" value="http://"> <!-- 주소 입력 --> 
+            <!-- fieldset, legend는 HTML 폼 양식 구분용으로 CSS에선 보이지 않도록 숨긴다. fieldset은 border숨기기로, legend는 요소 디자인에 방해되지 않도록 설정한다. -->
+        </fieldset>
+        <!-- 그룹2 -->
+        <fieldset>
+            <legend class="skip">가입양식</legend>
+            <!-- 아이디, 비번, 주민번호, 주소 -->
+            <dl>
+                <dt>아이디 (최대 10글자 제한)*필수</dt>
+                <dd><input type="text" name="user_id" maxlength="10" required></dd>
+                <dt>비밀번호(최대20글자 제한)*필수</dt>
+                <dd><input type="password" name="user_pwd" maxlength="20" required></dd>
+                <dt>주민등록번호</dt>
+                <dd>
+                    <input type="number" name="resident_first" maxlength="6" required> -
+                    <input type="password" name="resident_last" maxlength="7" required>
+                </dd>
+                <dt>주소</dt>
+                <dd>
+                    우편번호:<input type="number" name="post_code" maxlength="5" required><br>
+                    상세주소:<input type="text" name="address_details" required><br>
+                    메일주소:<input type="mail" name="user_email" required>
+                </dd>
+            </dl>
+            <div class="btn_g">
+                <button type="submit" id="join_btn">회원가입</button> <!-- 전송 -->
+                <button type="reset" id="join_reseet">가입취소</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

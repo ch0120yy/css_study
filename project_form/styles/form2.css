@@ -1,0 +1,67 @@
+body, html {background-color: #222;}
+main {
+    font-family: 'Noto Sans KR',sans-serif;
+    width: 1024px; margin: 0 auto;
+}
+main h1 {
+    text-align: center; 
+    margin: 97px 0 87px;
+}
+main h1 a {}
+main h1 a img {}
+main .signTap {width:500px; margin: 0 auto 55px;}
+main .signTap a {
+    color: #FFF;
+    font-size: 1.25rem; letter-spacing: -0.2px;
+    width: 49%; /* 50%는 줄이 바뀜 */
+    display: inline-block;
+    text-align: center;
+}
+main .signTap .active span {
+    padding-bottom: 5px;
+    border-bottom:3px solid #1ED760;
+}
+/* 폼 */
+main #signFrm {color: #FFF;width: 500px; margin: 0 auto;}
+main #signFrm .inGroup {}
+main #signFrm .inGroup .input {margin-bottom: 30px;}
+main #signFrm .inGroup .input input {
+    width: 100%; line-height: 73px;
+    border-radius: 36.5px;
+    padding-left: 40px;
+    color: #AAA; letter-spacing: -0.2px;
+    border: 0;
+}
+main #signFrm .inGroup .input input:nth-child(1) {margin-bottom: 14px;}
+/* 속성 선택자 */
+main #signFrm .inGroup .stay {
+    margin: 31px 0 33px; color: #FFF;
+}
+main #signFrm .inGroup .stay input {}
+main #signFrm .inGroup .stay input #staySignedY {}
+main #signFrm .inGroup .stay label {}
+/* 체크박스 */
+main #signFrm .inGroup .stay input[name^=stay] {display: none;}
+main #signFrm .inGroup .stay input[name^=stay]:checked+label {
+    background-image:url(../images/checked_box.svg);
+    background-repeat: no-repeat;
+    padding-left: 34px;
+}
+main #signFrm .inGroup .stay label[for*=stay] {
+    background-image:url(../images/unchecked_box.svg);
+    background-repeat: no-repeat;
+    padding-left: 34px;
+}
+/* 버튼 */
+main #signFrm .inGroup .btn {text-align: center; margin: 33px 0 14px;}
+main #signFrm .inGroup .btn #signInBtn {
+    letter-spacing: -0.2px; font-weight: 700;
+    width: 100%; line-height: 73px; 
+    border-radius: 36.5px; border: 0; 
+    background-color: #1ED760; color: #FFF;
+}
+main .findPwd {
+    text-align: center;
+    color: #FFF;
+    display: block; padding-bottom: 50px;
+}

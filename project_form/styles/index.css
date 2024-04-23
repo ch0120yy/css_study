@@ -1,0 +1,61 @@
+main {
+    font-family:'Noto Sans KR', sans-serif ;
+    width: 1024px;
+    letter-spacing: -0.2px;
+    margin: 0 auto;
+}
+main > * {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+main h1 {
+    font-size: 4.375rem; font-weight: 700;
+    line-height: 101px;
+    margin-bottom: 25px;
+}
+main p {
+    font-size: 1.25rem; 
+    margin-bottom: 57px;
+}
+main #login_frm {}
+main #login_frm fieldset {}
+main #login_frm fieldset .skip {}
+main #login_frm fieldset dl {}
+main #login_frm fieldset dl dt,
+main #login_frm fieldset h2 {
+    font-size: 1.875rem; font-weight: 700;
+    margin-bottom: 18px;
+}
+main #login_frm fieldset dl dd {margin-bottom: 38px;}
+/* main #login_frm fieldset dl dd input{} */
+/* 위의 속성선택자 적용은 아래로 */
+/* main #login_frm input[type*=em],
+main #login_frm input[type^=pas]  혹은 */ 
+main #login_frm fieldset dl dd input[name^=user] {
+    width: 100%; line-height: 53px;
+    padding-left: 15px;
+    border:1px solid #AAAAAA;
+    border-radius: 10px;
+    color:#000; /* input 입력 글자 색상 */
+    font-size: 1rem;
+}
+main #login_frm fieldset dl dd input[name^=user]::placeholder {color: #AAA;}
+main #login_frm fieldset h2 {margin-bottom: 32px; line-height:2.688rem;}
+main #login_frm fieldset .btn {}
+main #login_frm fieldset .btn button {
+    font-weight: 700;
+    width: 100%; line-height: 53px;
+    border-radius: 10px;
+    border: 1px solid #AAAAAA;
+}
+main #login_frm fieldset .btn #login_btn {
+    margin-bottom: 18px;
+    background-color:  #222; color: #FFF;
+}
+main #login_frm fieldset .btn #login_google_btn {
+    background-color: #FFF; color: #222;
+    margin-bottom: 62px;
+}
+main .join_link {color: #555; text-align: center;}
+main .join_link a {font-weight: 700;}
