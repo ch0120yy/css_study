@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0424</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>form</h1>
+    <form action="#" method="post" id="testFrm">
+        <fieldset class="select">
+            <legend class="skip">선택양식</legend>
+            <dl>
+                <dt>성별</dt>
+                <dd>선택양식 중 하나만 선택 가능, 무조건 1개가 선택되어야하는 경우</dd>
+                <dd>
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        <span>남자</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" checked="checked">
+                        <span>여자</span>
+                    </label>
+                    <!-- input과 label이 형제인 경우 -->
+                    <!-- input:checked+label => background-image -->
+                    <!-- input과 label이 부모-자식인 경우 -->
+                    <!-- label은 부모기 때문에 대상으로 불가능함 -->
+                    <!-- 태그 추가 생성으로 구성 -->
+                    <!-- input:checked+span => background-image -->
+                </dd>
+                <dt>관심사 (2개 이상 선택)</dt>
+                <dd>
+                    <input type="checkbox" id="webPlanner" name="interests" value="webPlanner">
+                    <label for="webPlanner">웹기획자</label>
+                    <input type="checkbox" id="webDesigner" name="interests" value="webDesigner" checked="checked">
+                    <label for="webDesigner">웹디자이너</label>
+                    <input type="checkbox" id="webPublisher" name="interests" value="webPublisher">
+                    <label for="webPublisher">웹퍼블리셔</label>
+                    <input type="checkbox" id="forntDeveloper" name="interests" value="forntDeveloper">
+                    <label for="forntDeveloper">프론트엔드개발자</label>
+                    <input type="checkbox" id="backDeveloper" name="interests" value="backDeveloper">
+                    <label for="backDeveloper">백엔드개발자</label>
+                </dd>
+                <dt>생일</dt>
+                <dd>
+                    <select name="moth">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select><span>월</span> <!-- select[name=month] + span {} 인접형제를 활용한 선택자 -->
+                    <select name="day">
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select><span>일</span> <!-- select[name=day] + span {} 인접형제를 활용한 선택자 -->
+                </dd>
+            </dl>
+        </fieldset>
+        <fieldset class="btn">
+            <legend class="skip">버튼</legend>
+            <!-- <input type="submit" value="전송, 확인"> -->
+            <button type="submit" id="loginBtn">전송, 확인</button>
+            <button type="reset" id="joinResetBtn">취소, 삭제</button>
+            <button type="button" id="allAroundBtn">범용특징버튼</button>
+            <hr>
+            <input type="file">
+        </fieldset>
+    </form>
+</body>
+
+</html>
