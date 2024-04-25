@@ -33,36 +33,36 @@
                 <dl>
                     <dt>아이디<span>*</span></dt>
                     <dd><input type="text" name="userId" placeholder="아이디를 입력해주세요" required></dd>
-                    <dd><button type="button" id="checkId">중복확인</button></dd>
+                    <dd><button type="button" id="checkIdBtn">중복확인</button></dd>
                     <dt>비밀번호<span>*</span></dt>
-                    <dd><input type="password" name="userPwd" placeholder="비밀번호를 입력해주세요" maxlength="20" required></dd>
-                    <dd></dd>
+                    <dd><input type="password" name="userPw" placeholder="비밀번호를 입력해주세요" maxlength="20" required></dd>
+                    <dd><!--  --></dd>
                     <dt>비밀번호확인<span>*</span></dt>
-                    <dd><input type="password" name="userPwd" placeholder="비밀번호를 한 번 더 입력해주세요" maxlength="20" required></dd>
-                    <dd></dd>
+                    <dd><input type="password" name="userPwRe" placeholder="비밀번호를 한 번 더 입력해주세요" maxlength="20" required></dd>
+                    <dd><!--  --></dd>
                     <dt>이름<span>*</span></dt>
                     <dd><input type="text" name="userName" placeholder="이름을 입력해주세요" required></dd>
-                    <dd></dd>
+                    <dd><!--  --></dd>
                     <dt>이메일<span>*</span></dt>
                     <dd><input type="email" name="userEmail" placeholder="예)abc@web.com" required></dd>
-                    <dd><button type="button" id="checkEmail">중복확인</button></dd>
+                    <dd><button type="button" id="checkEmailBtn">중복확인</button></dd>
                     <dt>휴대폰<span>*</span></dt>
                     <dd>
                         <select name="mobileCarrier">
                             <option value="kt">KT</option>
                             <option value="lg">LG</option>
                             <option value="skt">SKT</option>
-                            <option value="ktthr">KT알뜰폰</option>
-                            <option value="lgthr">LG알뜰폰</option>
-                            <option value="sktthr">SKT알뜰폰</option>
+                            <option value="ktThrifty">KT알뜰폰</option>
+                            <option value="lgThrifty">LG알뜰폰</option>
+                            <option value="sktThrifty">SKT알뜰폰</option>
                         </select>
-                        <input type="number" name="userPhoneNum" placeholder="숫자만 입력해주세요 예)01012345678" required>
+                        <input type="number" name="userPhone" placeholder="숫자만 입력해주세요 예)01012345678" required>
                     </dd>
-                    <dd><button type="button" id="getNumber">인증번호받기</button></dd>
+                    <dd><button type="button" id="authenticationBtn">인증번호받기</button></dd>
                     <dt>주소<span>*</span></dt>
                     <dd>
-                        <button type="button" id="searchAddress">주소검색</button>
-                        <span class="addressInfo">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
+                        <button type="button" id="btnAddressSearch">주소검색</button>
+                        <span>배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
                     </dd>
                     <dd></dd>
                     <dt>성별</dt>
@@ -74,18 +74,18 @@
                         <input type="radio" name="gender" value="none" id="none">
                         <label for="none">선택안함</label>
                     </dd>
-                    <dd></dd>
+                    <dd><!--  --></dd>
                     <dt>생년월일</dt>
-                    <dd class="userBirth">
-                        <input type="number" name="birthYear" placeholder="YYYY">
+                    <dd>
+                        <input type="number" name="birthYear" maxlength="4" placeholder="YYYY">
                         <span>/</span>
-                        <input type="number" name="birthMonth" placeholder="MM">
+                        <input type="number" name="birthMonth" maxlength="2" placeholder="MM">
                         <span>/</span>
-                        <input type="number" name="birthDate" placeholder="DD">
+                        <input type="number" name="birthDate" maxlength="2" placeholder="DD">
                     </dd>
-                    <dd></dd>
+                    <dd><!--  --></dd>
                 </dl>
-                <div class="btn">
+                <div class="result">
                     <button type="submit" id="joinBtn">가입하기</button>
                 </div>
             </fieldset>

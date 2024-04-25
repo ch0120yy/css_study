@@ -1,0 +1,100 @@
+body,html {background-color: pink;}
+main {
+    font-family: 'Noto Sans KR',sans-serif;
+    width: 360px;
+    margin: 0 auto;
+    padding-top: 10px; padding-left: 10px;
+}
+main > * {margin-bottom: 25px; letter-spacing:-0.4px;}
+main h1 {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+main .sns_join {
+    width: 320px; text-align: center;
+}
+main .sns_join p {
+    font-size: 0.625rem; color: #767676;
+    margin-bottom: 13px;
+}
+main .sns_join .sns_link {padding-bottom: 25px; border-bottom: 1px solid #E7E7E7;}
+main .sns_join .sns_link a {padding-left: 10px; padding-right: 10px;}
+main .sns_join .sns_link a img {}
+main #join_frm {
+    width: 340px;
+    font-size: 0.875rem;
+}
+main #join_frm .join_user {}
+main #join_frm .join_user dl {}
+main #join_frm .join_user dl dt {
+    font-weight: 700; margin-bottom: 10px;
+}
+main #join_frm .join_user dl dd {width: 100%; margin-bottom: 10px;}
+main #join_frm .join_user dl dd span {color: #aaa; padding: 5px;}
+main #join_frm .join_user dl dt:nth-of-type(2n)+dd {font-size: 0.75rem; color: #767676;}
+main #join_frm .join_user dl dd:nth-child(3n) {margin-bottom: 25px;}
+main #join_frm .join_user dl dd input[name^=user] {
+    width: 100%; height: 38px; color: #aaa;
+    font-size: 0.875rem; padding-left: 15px;
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+}
+main #join_frm .join_user dl dd input[name$=mail] {width: 155px;}
+main #join_frm .join_user dl dd select[name$=select] {
+    width: 156px;height: 38px; float: right;
+    appearance: none; padding-left: 15px;
+    font-size: 0.875rem;
+    color: #767676; border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    background-image:url(../images/oh_drop_down.svg);
+    background-repeat: no-repeat;
+    background-position: 130px 16px;
+}
+main #join_frm .join_user dl dd select[name$=select] option {
+    color: #000;
+}
+main #join_frm .join_user dl dd #authentication_btn {
+    width: 100%; height: 45px;
+    border: 1px solid #D8D8D8;
+    background-color: #F7F8FA;
+    border-radius: 5px;
+}
+main #join_frm .join_agree {margin-bottom: 25px;} /* 약관동의 */
+main #join_frm .join_agree h2 {
+    font-size: 0.875rem; margin-bottom: 15px;
+    font-weight: 700;
+}
+main #join_frm .join_agree .select_agree {
+    width: 340px; border: 1px solid #E7E7E7;
+    padding: 20px 15px;
+}
+main #join_frm .join_agree .select_agree li {margin-bottom: 20px;}
+main #join_frm .join_agree .select_agree li:first-child {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E7E7E7;
+}
+main #join_frm .join_agree .select_agree li:last-child {margin-bottom: 0px;}
+main #join_frm .join_agree .select_agree li label {line-height: 18px;}
+main #join_frm .join_agree .select_agree li label input[name=agreement] {
+    appearance: none;
+}
+
+main #join_frm .join_agree .select_agree li label em {
+    font-size: 0.625rem; margin-left: 2px;
+}
+main #join_frm .join_agree .select_agree li a {}
+main #join_frm .join_agree .select_agree li a img {
+    float: right;
+}
+main #join_frm .btn_area {text-align: center;}
+main #join_frm .btn_area #join_btn {
+    background-color: #0AADDB;
+    color: #FFF; font-weight:700;
+    border: none; width: 340px; height: 45px;
+    border-radius: 5px; margin-bottom: 25px;
+}
+main #join_frm .btn_area span {font-size: 0.875rem;}
+main #join_frm .btn_area span a {
+    font-weight: 700;
+    text-decoration: underline;
+}
