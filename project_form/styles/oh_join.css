@@ -1,4 +1,4 @@
-body,html {background-color: pink;}
+body,html {background-color: #FFF;}
 main {
     font-family: 'Noto Sans KR',sans-serif;
     width: 360px;
@@ -58,6 +58,7 @@ main #join_frm .join_user dl dd #authentication_btn {
     border: 1px solid #D8D8D8;
     background-color: #F7F8FA;
     border-radius: 5px;
+    font-size: 1rem; color: #AAAAAA; font-weight: 700;
 }
 main #join_frm .join_agree {margin-bottom: 25px;} /* 약관동의 */
 main #join_frm .join_agree h2 {
@@ -68,28 +69,55 @@ main #join_frm .join_agree .select_agree {
     width: 340px; border: 1px solid #E7E7E7;
     padding: 20px 15px;
 }
-main #join_frm .join_agree .select_agree li {margin-bottom: 20px;}
+main #join_frm .join_agree .select_agree li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
 main #join_frm .join_agree .select_agree li:first-child {
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #E7E7E7;
 }
 main #join_frm .join_agree .select_agree li:last-child {margin-bottom: 0px;}
-main #join_frm .join_agree .select_agree li label {line-height: 18px;}
-main #join_frm .join_agree .select_agree li label input[name=agreement] {
-    appearance: none;
+main #join_frm .join_agree .select_agree li label {
+    height: 18px;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    width: 100%;
 }
-
+/* 체크박스 입력 */
+main #join_frm .join_agree .select_agree li label .checkbox_design {
+    width: 18px; height: 18px;
+    border: 1px solid #DADDE0;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 5px;
+}
+main #join_frm .join_agree .select_agree li label input[name=agreement] {
+    display: none;
+}
 main #join_frm .join_agree .select_agree li label em {
     font-size: 0.625rem; margin-left: 2px;
+    color: #767676;
+    display: inline-block; line-height: 18px;
 }
-main #join_frm .join_agree .select_agree li a {}
-main #join_frm .join_agree .select_agree li a img {
-    float: right;
+/* 글자색 일부 적용 */
+main #join_frm .join_agree .select_agree li:nth-of-type(2) label em,
+main #join_frm .join_agree .select_agree li:nth-of-type(3) label em,
+main #join_frm .join_agree .select_agree li:nth-of-type(4) label em {color:#009FCE;}
+main #join_frm .join_agree .select_agree li .view_more_area {}
+main #join_frm .join_agree .select_agree li .view_more_area::after {
+    content: '';
+    background-image:url(../images/oh_view_more_arrow.svg);
+    background-repeat: no-repeat;
+    width: 14px; height: 18px;
+    display: inline-block;
 }
 main #join_frm .btn_area {text-align: center;}
 main #join_frm .btn_area #join_btn {
-    background-color: #0AADDB;
-    color: #FFF; font-weight:700;
+    background-color: #35c5f0;
+    color: #FFF; font-weight:700; font-size: 1rem;
     border: none; width: 340px; height: 45px;
     border-radius: 5px; margin-bottom: 25px;
 }
