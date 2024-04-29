@@ -1,0 +1,161 @@
+main {}
+/* 배경 공통&개별값 */
+main .bg {
+    background-position:center;
+    background-repeat: no-repeat;
+}
+/* 공통 bg 1250 적용 */
+main .bg > section {
+    width: 1250px; margin: 0 auto;
+    background-color: brown;
+}
+main .bg1 {
+    background-image:url(../images/bg.jpg);
+    height: 1002px;
+}
+/* ----------------------------------- 1. 표지 ----------------------------------- */
+main .bg1 section {}
+main .bg1 section h1 {}
+main .bg1 section h1 a {}
+main .bg1 section h1 a img {}
+main .bg1 section h2 {
+    text-align: center;
+    font-size: 4.375rem; color: #FFF;
+    letter-spacing: -0.2px; line-height: 1.2; /* 행간 120% */
+    margin: 150px 0 57px;
+}
+main .bg1 section h2 em {font-weight: 700;}
+main .bg1 section .sponsor_link::after {
+    /* 존재하지 않는 요소. CSS로 디자인에 활욜할 때 사용함 */
+    content:'';
+    background-image:url(../images/btn_right_arrow.svg);
+    background-repeat:no-repeat;
+    display: inline-block;
+    width:32px; height:32px;
+}
+main .bg1 section .sponsor_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; line-height: 71px; */
+    width: 404px; height: 71px;
+    margin: 0 auto;
+    font-size: 2.125rem; font-weight: 700; color: #FFF;
+    /* 0% FE9300, 100% FF7300 */
+    /* CSS 회전각도 단위 deg */
+    background: linear-gradient(90deg, #FE9300,#FF7300);
+    /* gradient 적용을 위해 backgroun 통합 속성을 사용했을 때
+    해당 요소 추가 배경이미지 꾸미기를 원한다면 가상 선택자(before, after)를 활용하는 것을 권장 */
+    border-radius: 50px;
+}
+main .bg1 section .sponsor_question::before,
+main .bg1 section .sponsor_question::after {
+    content: '';
+    background-repeat:no-repeat;
+    display:inline-block;
+    background-size: 26px;
+    width: 26px; height: 26px;
+}
+main .bg1 section .sponsor_question::before {
+    background-image:url(../images/icon_sms.svg);
+    margin-right: 5px;
+}
+main .bg1 section .sponsor_question::after {
+    background-image:url(../images/btn_right_arrow.svg);
+}
+main .bg1 section .sponsor_question {
+    background-color: #050505; color: #FFF;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    float: right;
+    /* line-height:51px; text-align: center; */
+    height:51px; width:407px;
+    border-radius: 50px;
+    font-size: 1.625rem; margin-top: 155px;
+}
+/* ----------------------------------- 2. 퀴즈 ----------------------------------- */
+main .bg2 {
+    background-image:url(../images/bg_2.jpg);
+    /* height: 540px; */ /* 높이는 알아서 커지게끔 두는 게 좋음 */
+}
+/* ----------------------------------- 2. 퀴즈 ----- 퀴즈 -------------- */
+main .bg2 section {
+    display: flex; /* flex의 item 기본 메인축 정렬은 수평 */
+}
+main .bg2 section > * {flex: 1; /* width: 50%; */}
+main .bg2 section #quiz_frm {
+    padding: 42px 0 56px;
+}
+main .bg2 section #quiz_frm .quiz_contents {color: #FFF;}
+main .bg2 section #quiz_frm .quiz_contents h2 {
+    font-size: 3.438rem; letter-spacing: -0.1px;
+    font-weight: 500; margin: 0 0 26px;
+    width: 450px; text-align: center;
+}
+main .bg2 section #quiz_frm .quiz_contents h2+p {
+    font-size: 1.25rem; line-height: 1.7; margin: 0 0 17px;
+}
+main .bg2 section #quiz_frm .quiz_contents .quiz_list {margin: 0 0 28px;}
+main .bg2 section #quiz_frm .quiz_contents .quiz_list li {margin: 0 0 20px;font-size: 1.25rem;}
+main .bg2 section #quiz_frm .quiz_contents .quiz_list li:last-child {margin: 0;}
+main .bg2 section #quiz_frm .quiz_contents .quiz_list li input[name=quiz_q] {display: none;}
+main .bg2 section #quiz_frm .quiz_contents .quiz_list li label {
+    background-image:url(../images/quiz_unchecked.svg);
+    background-repeat: no-repeat;
+    padding-left: 48px; /* 너비 28px+ 여백 20px */
+    line-height: 28px; /* 정렬할 수 있어서 height 보다 예쁘게 적용됨 */
+    display: inline-block;
+}
+main .bg2 section #quiz_frm .quiz_contents .quiz_list+p {}
+main .bg2 section #quiz_frm .quiz_contents .quiz_list+p #answer_btn {
+    background-color: #050505; color: #FFF; border: 0;
+    border-radius: 50px; width: 450px; line-height: 39px;
+}
+/* ----------------------------------- 2. 퀴즈 ----- 퀴즈(인풋 체크 시 활성화 label 디자인) -------------- */
+main .bg2 section #quiz_frm .quiz_contents .quiz_list li input[name=quiz_q]:checked + label {
+    background-image:url(../images/quiz_checked.svg) ;
+}
+/* ----------------------------------- 2. 퀴즈 ----- 참여현황 -------------- */
+main .bg2 .quiz_participation {
+    padding: 134px 0 0; 
+    display: flex; flex-flow: column wrap; 
+    /* flex의 기본 값은 수평이므로 수직으로 바꿔주는 flex-flow:column */
+    align-items: flex-end;
+}
+main .bg2 .quiz_participation .status {
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+main .bg2 .quiz_participation .status h2::before {
+    background-image:url(../images/icon_person.svg);
+    content: '';
+    display: inline-block;
+    width: 42px; height:42px;
+}
+main .bg2 .quiz_participation .status h2 {
+    background-color: #FE9300; color: #FFF;
+    font-size: 1.625rem; line-height: 60px;
+    display: flex;
+    justify-content: center; align-items: center; 
+}
+main .bg2 .quiz_participation .status .contents {
+    background-color: #FFF; text-align: center;
+    padding: 40px 0;
+}
+main .bg2 .quiz_participation .status .contents em {
+    font-size: 4.375rem; font-weight: 700; letter-spacing: -0.2px;
+    color: #FF7300;
+}
+main .bg2 .quiz_participation .status .contents span {color: #FF7300;}
+main .bg2 .quiz_participation .status .contents strong {}
+main .bg2 .quiz_participation .status .contents span,
+main .bg2 .quiz_participation .status .contents strong {
+    font-size: 2.125rem; font-weight: 700;
+}
+main .bg2 .quiz_participation p {
+    font-size: 1.25rem; color: #FFF;
+    margin-top: 20px;
+}
+/* ----------------------------------- 3. 동영상 ----------------------------------- */
