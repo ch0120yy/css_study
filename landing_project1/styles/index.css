@@ -7,7 +7,7 @@ main .bg {
 /* 공통 bg 1250 적용 */
 main .bg > section {
     width: 1250px; margin: 0 auto;
-    background-color: brown;
+    /* background-color: brown; */
 }
 main .bg1 {
     background-image:url(../images/bg.jpg);
@@ -159,3 +159,8 @@ main .bg2 .quiz_participation p {
     margin-top: 20px;
 }
 /* ----------------------------------- 3. 동영상 ----------------------------------- */
+main .bg3 {background-image:url(../images/bg_3.jpg);}
+main .bg3 section {}
+main .bg3 section h2 {}
+main .bg3 section iframe {}
+main .bg3 section a {}
