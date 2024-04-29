@@ -12,6 +12,7 @@ main h1 {
 }
 main .sns_join {
     width: 320px; text-align: center;
+    margin: 0 auto 25px;
 }
 main .sns_join p {
     font-size: 0.625rem; color: #767676;
