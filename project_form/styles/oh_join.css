@@ -17,7 +17,8 @@ main .sns_join p {
     font-size: 0.625rem; color: #767676;
     margin-bottom: 13px;
 }
-main .sns_join .sns_link {padding-bottom: 25px; border-bottom: 1px solid #E7E7E7;}
+main .sns_join .sns_link {
+    padding-bottom: 25px; border-bottom: 1px solid #E7E7E7;}
 main .sns_join .sns_link a {padding-left: 10px; padding-right: 10px;}
 main .sns_join .sns_link a img {}
 main #join_frm {
@@ -80,21 +81,20 @@ main #join_frm .join_agree .select_agree li:first-child {
 }
 main #join_frm .join_agree .select_agree li:last-child {margin-bottom: 0px;}
 main #join_frm .join_agree .select_agree li label {
-    height: 18px;
+    background-image:url(../images/oh_uncheck_box.svg);
+    width: 100%;
     display: flex;
     justify-items: flex-start;
     align-items: center;
-    width: 100%;
+    background-repeat: no-repeat;
+    padding-left: 25px; height: 20px;
+    display: inline-block;
 }
 /* 체크박스 입력 */
-main #join_frm .join_agree .select_agree li label .checkbox_design {
-    width: 18px; height: 18px;
-    border: 1px solid #DADDE0;
-    border-radius: 4px;
-    display: inline-block;
-    margin-right: 5px;
+main #join_frm .join_agree .select_agree li input:checked+label {
+    background-image: url(../images/oh_checked_box.svg);
 }
-main #join_frm .join_agree .select_agree li label input[name=agreement] {
+main #join_frm .join_agree .select_agree li input[name=agreement] {
     display: none;
 }
 main #join_frm .join_agree .select_agree li label em {
