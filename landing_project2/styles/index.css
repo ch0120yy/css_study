@@ -1,0 +1,79 @@
+main {}
+/* 배경 공통 적용 */
+main .bg {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* 1250px 공통 적용 */
+main .bg > section {
+    width: 1250px; margin: 0 auto;
+    background-color: aqua;
+}
+/* ------------------------------ 1.메인 ------------------------------ */
+main .bg1 {
+    height: 945px;
+    background-image:url(../images/bg_1.png);
+}
+main .bg1 header {
+    width: 1920px;
+    margin: 0 auto;
+    padding: 30px 100px 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .bg1 header h1 {}
+main .bg1 header h1 a {}
+main .bg1 header h1 a img {}
+main .bg1 header .gnb {}
+main .bg1 header .gnb p {
+    display: inline-block; margin-right: 20px;
+}
+main .bg1 header .gnb p a {
+    font-size: 1.25rem; font-weight: 700;
+    color: #FFF; letter-spacing: -0.2px;
+}
+/* 1250 너비 적용 */
+main .bg1 section {
+    margin: 188px auto;
+}
+main .bg1 section h2 {
+    font-size:4.375rem; color: #FFF;
+    font-weight: 700; line-height: 1.3;
+}
+main .bg1 section h2 em {font-weight: 900; color:#0060FF;}
+main .bg1 section p {
+    color: #FFF;
+    font-size: 1.875rem; letter-spacing: -0.2px;
+    margin: 24px 0 62px; line-height: 1.3;
+}
+main .bg1 section .down_load_btn {
+    display: flex;
+    border-radius: 50px;
+}
+main .bg1 section .down_load_btn .app_store_btn {
+    margin-right: 15px;
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+    
+}
+main .bg1 section .down_load_btn .app_store_btn span::before {
+    content: '';
+    background-image:url(../images/app_store_icon.png);
+    display: inline-block; width: 30px; height: 37px;
+    padding-right: ;
+}
+main .bg1 section .down_load_btn .app_store_btn span {}
+main .bg1 section .down_load_btn .google_play_btn {}
+main .bg1 section .down_load_btn .google_play_btn span {}
+/* 버튼 공통 적용 */
+main .bg1 section .down_load_btn .app_store_btn span,
+main .bg1 section .down_load_btn .google_play_btn span {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-color: #F5F5F7; 
+    width: 265px; line-height: 76px;
+}
+main .bg1 section .next_page {}
+/* ------------------------------ 2.퀴즈 ------------------------------ */
