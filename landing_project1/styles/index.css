@@ -1,13 +1,41 @@
-main {}
-/* 배경 공통&개별값 */
+main {background-color: orange;}
+/* 배경 공통&개별값 + 공통제목 + 공통 후원 버튼 */
 main .bg {
     background-position:center;
     background-repeat: no-repeat;
+    background-size:cover; /* 영역의 크기가 늘어나도 배경 이미지가 비율에 맞게 여백 없이 씌워주는 값 */
 }
 /* 공통 bg 1250 적용 */
 main .bg > section {
     width: 1250px; margin: 0 auto;
     /* background-color: brown; */
+}
+main .bg section .sub_title {
+    font-size: 3.438rem; letter-spacing: -0.1px;
+    font-weight: 500; color: #FFF; line-height: 1.2;
+}
+main .bg section .sponsor_link::after {
+    /* 존재하지 않는 요소. CSS로 디자인에 활욜할 때 사용함 */
+    content:'';
+    background-image:url(../images/btn_right_arrow.svg);
+    background-repeat:no-repeat;
+    display: inline-block;
+    width:32px; height:32px;
+}
+main .bg section .sponsor_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; line-height: 71px; */
+    width: 404px; height: 71px;
+    margin: 0 auto;
+    font-size: 2.125rem; font-weight: 700; color: #FFF;
+    /* 0% FE9300, 100% FF7300 */
+    /* CSS 회전각도 단위 deg */
+    background: linear-gradient(90deg, #FE9300,#FF7300);
+    /* gradient 적용을 위해 backgroun 통합 속성을 사용했을 때
+    해당 요소 추가 배경이미지 꾸미기를 원한다면 가상 선택자(before, after)를 활용하는 것을 권장 */
+    border-radius: 50px;
 }
 main .bg1 {
     background-image:url(../images/bg.jpg);
@@ -25,29 +53,6 @@ main .bg1 section h2 {
     margin: 150px 0 57px;
 }
 main .bg1 section h2 em {font-weight: 700;}
-main .bg1 section .sponsor_link::after {
-    /* 존재하지 않는 요소. CSS로 디자인에 활욜할 때 사용함 */
-    content:'';
-    background-image:url(../images/btn_right_arrow.svg);
-    background-repeat:no-repeat;
-    display: inline-block;
-    width:32px; height:32px;
-}
-main .bg1 section .sponsor_link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* text-align: center; line-height: 71px; */
-    width: 404px; height: 71px;
-    margin: 0 auto;
-    font-size: 2.125rem; font-weight: 700; color: #FFF;
-    /* 0% FE9300, 100% FF7300 */
-    /* CSS 회전각도 단위 deg */
-    background: linear-gradient(90deg, #FE9300,#FF7300);
-    /* gradient 적용을 위해 backgroun 통합 속성을 사용했을 때
-    해당 요소 추가 배경이미지 꾸미기를 원한다면 가상 선택자(before, after)를 활용하는 것을 권장 */
-    border-radius: 50px;
-}
 main .bg1 section .sponsor_question::before,
 main .bg1 section .sponsor_question::after {
     content: '';
@@ -88,13 +93,12 @@ main .bg2 section #quiz_frm {
     padding: 42px 0 56px;
 }
 main .bg2 section #quiz_frm .quiz_contents {color: #FFF;}
-main .bg2 section #quiz_frm .quiz_contents h2 {
-    font-size: 3.438rem; letter-spacing: -0.1px;
-    font-weight: 500; margin: 0 0 26px;
+main .bg2 section #quiz_frm .quiz_contents .sub_title {
+    margin: 0 0 26px;
     width: 450px; text-align: center;
 }
 main .bg2 section #quiz_frm .quiz_contents h2+p {
-    font-size: 1.25rem; line-height: 1.7; margin: 0 0 17px;
+    font-size: 1.25rem; line-height: 1.7;margin: 0 0 17px;
 }
 main .bg2 section #quiz_frm .quiz_contents .quiz_list {margin: 0 0 28px;}
 main .bg2 section #quiz_frm .quiz_contents .quiz_list li {margin: 0 0 20px;font-size: 1.25rem;}
@@ -158,9 +162,105 @@ main .bg2 .quiz_participation p {
     font-size: 1.25rem; color: #FFF;
     margin-top: 20px;
 }
-/* ----------------------------------- 3. 동영상 ----------------------------------- */
+/* ----------------------------------- 3. 새끼 북극곰의 이야기 ----------------------------------- */
 main .bg3 {background-image:url(../images/bg_3.jpg);}
-main .bg3 section {}
-main .bg3 section h2 {}
-main .bg3 section iframe {}
+main .bg3 section {padding: 123px 0 135px; text-align: center;}
+main .bg3 section .sub_title {color: #000;}
+main .bg3 section #video {width: 900px; height: 600px; margin: 70px 0;}
 main .bg3 section a {}
+/* ----------------------------------- 4. 빙하 면적 50% 감소 ----------------------------------- */
+main .bg4 {background-image:url(../images/bg_4.jpg);}
+main .bg4 section {}
+main .bg4 section .sub_title {}
+main .bg4 section .sub_title em {}
+main .bg4 section .sub_title+p {}
+main .bg4 section p:last-child {}
+main .bg4 section p:last-child img {}
+/* ----------------------------------- 5. 빙하감소 ----------------------------------- */
+main .bg5 {background-image:url(../images/bg_5.jpg) ;}
+main .bg5 section {padding: 76px 0 140px; text-align: center;}
+main .bg5 section .sub_title {color: #050505;}
+main .bg5 section .sub_title+p {
+    font-size: 1.625rem; line-height: 1.2; color: #050505;
+    margin: 30px 0 92px;;
+}
+main .bg5 section .container {
+    display: flex;
+}
+main .bg5 section .container li {
+    flex:1; margin-right: 45px;
+    text-align: center;
+}
+main .bg5 section .container li:last-child {margin-right: 0;}
+main .bg5 section .container li .box_img {
+    background-image:url(../images/box_img1.jpg);
+    height: 320px; padding: 47px;
+}
+main .bg5 section .container li:nth-of-type(2) .box_img {background-image:url(../images/box_img2.jpg);}
+main .bg5 section .container li:last-of-type .box_img {background-image:url(../images/box_img3.jpg) ;}
+main .bg5 section .container li .box_img h3 {
+    font-size: 2.625rem; font-weight: 700;
+    line-height: 1.2; color: #FFF;
+    margin-bottom: 10px;
+}
+main .bg5 section .container li .box_img p {
+    font-size: 1.625rem; line-height: 1.2; color: #FFF;
+}
+main .bg5 section .container li .contents {
+    background-color: #FFF;
+    font-size: 1.25rem; line-height: 1.7;
+    height: 250px;
+    padding: 20px 37px 0;
+}
+/* ----------------------------------- 6. 지구 전체의 위기 ----------------------------------- */
+main .bg6 {background-image:url(../images/bg_6.jpg);}
+main .bg6 section {}
+main .bg6 section .sub_title {}
+main .bg6 section .sub_title em {}
+main .bg6 section .sub_title+p {}
+main .bg6 section p:last-child {}
+main .bg6 section p:last-child img {}
+/* ----------------------------------- 4,5,6 그룹 선택자 ----------------------------------- */
+main .bg4 section,
+main .bg5 section,
+main .bg6 section {padding: 94px 0 100px;}
+main .bg4 section .sub_title,
+main .bg6 section .sub_title {}
+main .bg4 section .sub_title em,
+main .bg6 section .sub_title em {
+    background-color: #FFF; color: #2E3148;
+    display: inline-block;
+    font-weight: 500; padding: 10px 0;
+}
+main .bg4 section .sub_title+p,
+main .bg6 section .sub_title+p {
+    font-size:2.125rem; font-weight: 500; line-height: 1.2;
+    color:#FFF; margin: 50px 0;
+}
+main .bg4 section p:last-child,
+main .bg6 section p:last-child {}
+main .bg4 section p:last-child img,
+main .bg6 section p:last-child img {}
+/* ----------------------------------- 7. 믿을 수 있는 WWF ----------------------------------- */
+main .bg7 {background-image:url(../images/bg_7.jpg);}
+main .bg7 section {padding: 94px 0 80px; text-align: center;}
+main .bg7 section h1 {
+    font-size: 4.375rem; line-height: 1.2;
+    letter-spacing: -0.2px; font-weight: 700;
+}
+main .bg7 section p {
+    font-size: 2.125rem; line-height: 1.2;
+    margin: 74px 0;
+}
+main .bg7 section p:last-child {margin: 0;}
+/* ----------------------------------- 8. WWF 다양한 활동 ----------------------------------- */
+main .bg8 {}
+main .bg8 section {}
+main .bg8 section h2 {}
+main .bg8 section .box_contents {}
+main .bg8 section .box_contents .box_bg {}
+main .bg8 section .box_contents .box_bg:last-of-type {
+    
+}
+main .bg8 section .box_contents .box_bg dt {}
+main .bg8 section .box_contents .box_bg dd {}
