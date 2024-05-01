@@ -1,0 +1,122 @@
+#app {
+    border: 1px solid black; /* 경계 구분용 */
+    width: 375px;
+    height: 812px; /* 와이어프레임 기준 임시 높이값 */
+    margin: 30px auto 0;
+    padding-top: 42px;
+}
+/* =========== 레이아웃 */
+#app header {
+    border: 1px solid black; /* 경계 구분용 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px; height: 56px;
+}
+#app main {}
+/* ========================= 광고 */
+#app .adver {background-color: gray; height: 86px;}
+/* ============== Header */
+#app header h1 {
+    font-weight: 700; font-size: 1.25rem; /* 20px */
+}
+#app header .right {display: flex;}
+#app header .right a {
+    width: 24px; height: 24px;
+    margin-left: 16px;
+    background-color: gray;
+}
+#app header .right a:first-child {margin: 0;}
+/* ========================== Main */
+#app main .adver1 {margin-bottom: 34px;}
+/* ====================== Login */
+#app main > h2 {margin:0 16px 12px;}
+#app main h2 a {}
+#app main h2 a em {font-weight: 700;}
+/* ======================== Menu */
+#app main > .category {
+    border: 1px solid gray;
+    margin: 0 16px 16px;
+    display: flex; flex-flow: row wrap;
+    padding: 10px 0;
+}
+#app main > .category a {
+    border: 1px solid gray;
+    width: calc(100% / 4); /* 계산식으로 작성하는 방법 */
+    display: flex; flex-flow: column wrap;
+    align-items: center;
+    margin: 0 0 24px;
+}
+#app main > .category a:nth-child(5),
+#app main > .category a:nth-child(6),
+#app main > .category a:nth-child(7),
+#app main > .category a:nth-child(8) {margin: 0;}
+#app main > .category a img {
+    width: 42px; height: 42px;
+    margin: 0 0 2px;
+    border: 1px solid gray;
+}
+#app main > .category a span {
+    font-size: 0.75rem;
+}
+/* ========================= Notice */ 
+#app main .notice_g {
+    border: 1px solid gray;
+    padding: 16px; margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#app main .notice_g .notice_left {
+    display: flex;
+    align-items: center;
+}
+#app main .notice_g .notice_left img {
+    width: 24px; height: 24px; background-color:gray;
+    margin-right: 10px;
+}
+#app main .notice_g .notice_left span {font-size: 0.75rem;} 
+#app main .notice_g .notice_right {}
+#app main .notice_g .notice_right img {width: 16px; height: 16px; background-color: gray;}
+/* ========================= 광고 */
+#app main .adver2 {margin-bottom: 12px;}
+/* ========================= 전체서비스 */
+#app main .service_wrap {}
+#app main .service_wrap .top {
+    padding: 28px 16px 16px; margin: 0 0 12px;
+    border: 1px solid gray;
+    display: flex; justify-content: space-between;
+}
+#app main .service_wrap .top h2 {}
+#app main .service_wrap .top .search {
+    display: flex; align-items: center;
+}
+#app main .service_wrap .top .search img {
+    margin-right: 8px;
+    width: 16px; height: 16px; border: 1px solid gray;
+}
+#app main .service_wrap .top .search span {}
+#app main .service_wrap h3 {
+    font-size: 0.75rem; margin: 0 16px 16px;
+    border: 1px solid gray;
+    padding: 10px 16px;
+}
+#app main .service_wrap .news_category {
+    border: 1px solid gray;
+    margin: 0 16px; padding: 0 16px;
+    display: flex; flex-flow: row wrap;
+}
+#app main .service_wrap .news_category a {
+    width:calc(100% / 2); padding: 0 10px;
+    border: 1px solid gray;
+    display: flex; align-items: center; margin-bottom: 16px;
+}
+#app main .service_wrap .news_category a:nth-child(3),
+#app main .service_wrap .news_category a:nth-child(4) {margin: 0;}
+#app main .service_wrap .news_category a img {
+    width: 24px; height: 24px; background-color: gray;
+    margin-right: 8px;
+}
+#app main .service_wrap .news_category a span {
+    font-size: 0.875rem;
+}
