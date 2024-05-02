@@ -1,0 +1,79 @@
+#app {
+    width: 375px; height: 812px;
+    margin: 30px auto;
+    border: 1px solid black;
+    padding-top: 42px;
+}
+#app .top {border: 1px solid black; padding: 16px;}
+#app .top .prev {
+    width: 24px; height: 24px;
+    background-color: gray;
+    overflow: hidden; display: inline-block;
+}
+#app h1 {
+    width: 130px; height: 36px; 
+    margin: 48px auto; background-color: gray;
+}
+#app h1 a {}
+#app h1 .prev img {}
+#app .keyboard_g {
+    border: 1px solid gray;
+    margin: 0 0 16px; padding: 0 16px;
+}
+#app .keyboard_g a {
+    font-size: 0.75rem;
+    /* text-align: center */;
+    display: flex; /* div(container) a(item) */
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+#app .keyboard_g a img {width: 16px; height: 16px; background-color: gray; margin-left: 4px;}
+/* ================================ 로그인 양식 */
+#app #login_frm {}
+#app #login_frm .login_g {}
+#app #login_frm .login_g ul {
+    margin: 0 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#app #login_frm .login_g ul li {}
+#app #login_frm .login_g ul li:first-child {border-bottom: 1px solid black;}
+#app #login_frm .login_g ul li input[name^=user] {
+    border: 0; outline: none;
+    width: 100%; padding: 16px 16px 16px 56px;
+} /* input, button은 inline 요소지만 CSS에서 크기를 인식한다. */
+#app #login_frm .login_g ul li input[name$=id] {}
+#app #login_frm .login_g ul li input[name$=pw] {}
+#app #login_frm .login_g .btn {
+    margin: 0 16px;
+}
+#app #login_frm .login_g .btn #login_btn {
+    padding: 16px 0; width: 100%;
+}
+/* button 안쪽 글자는 기본 정렬이 가운데이다! */
+/* ================================ 로그인 오류 시 출력 메세지 (기본 - 숨김) */
+#app #login_frm .login_g .error_message {
+    font-size: 0.75rem; padding: 0 16px 16px;
+    display: none; /* 초기 숨김 */
+}
+/* ================================ 찾기, 가입 */
+#app .search_join {
+    margin-top: 34px;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+#app .search_join a {
+    font-size: 0.75rem;
+    display: flex; align-items: center;
+}
+#app .search_join a::after {
+    content: ''; margin: 0 8px;
+    width: 1px; height: 10px;
+    background-color: black;
+    display: block;
+}
+/* ============================ 마지막 구분선 제거 */
+#app .search_join a:last-child::after {display:none;} /* 대상의 요소 자체를 무효화하는 것 */

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인|네이버</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/longin.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- status bar -->
+        <div class="top"><a href="./menu.html" class="prev"><img src="#" alt="이전 페이지로 이동"></a></div>
+        <h1><a href="./index.html"><img src="#" alt="NAVER"></a></h1>
+        <div class="keyboard_g">
+            <a href="#">PC 키보드 보기<img src="#" alt=""></a>
+        </div>
+        <form action="#" method="post" id="login_frm">
+            <fieldset class="login_g">
+                <legend class="skip">로그인 양식</legend>
+                <ul>
+                    <li><input type="text" name="user_id" placeholder="아이디" autofocus></li>
+                    <li><input type="password" name="user_pw" placeholder="비밀번호"></li>
+                </ul>
+                <!-- 사용자 상태에 따라 숨겼다 보였다 하는 동적 기능 -->
+                <!-- 보이는 상태로 디자인 후 숨겨놓기 -->
+                <p class="error_message">로그인이 실패하였습니다. 정보를 다시 한 번 확인해주세요.</p>
+                <div class="btn">
+                    <button type="submit" id="login_btn">로그인</button>
+                </div>
+            </fieldset>
+        </form>
+        <div class="search_join">
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">아이디 찾기</a>
+            <a href="#">회원가입</a>
+        </div> <!-- 의미 없는 장식은 CSS로 가상선택자 활용하기 -->
+    </div>
+</body>
+
+</html>
