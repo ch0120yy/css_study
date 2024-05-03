@@ -95,6 +95,12 @@
 ### nth-child(n)
 * ex) div에 첫번째 p를 선택 `div>p:nth-child(2)`
 * ex) p안의 a를 선택 `div>p:nth-child(4)>a`
+- **even** : 짝수를 선택함
+- **odd** : 홀수를 선택함
+- **숫자n** : 배수를 선택함
+- **숫자n+1** : 배수의 다음 값들을 선택
+### nth-of-type()
+* 형제 그룹 사이에서 자신과 동일한 요소만을 보고 해당 요소 순서에 따라 대상을 선택
 ## 테이블 열 수평/수직 방향 합치기
 ### rowspan
 * 수직열 합치기 속성
@@ -117,6 +123,7 @@
 * name : CSS에서 id, class와 같이 선택자로 지정할 수 있는 값
 * readonly : 읽기 전용. ex)자동입력방지 표시
 * required : 필수 작성 속성, 작성하지 않을 시 다음 단계로 넘어가지 않음
+* disabled : 필드 비활성화 ex)회원 정보 변경에서 수정을 하면 안 되는 부분들에 주로 사용
 * autofocus, autocomplete : 페이지 로딩 시 컨트롤 자동으로 포커스 설정, `autocomlete=on` 자동 완성 기능 설정 
 * value : 미리 제시되는 텍스트
 * palceholder : 미리 제시되는 텍스트
@@ -134,22 +141,58 @@
 * radio 등의 사용자가 입력이 아닌 선택으로 들어가는 선택양식
 * `name` : 입력양식(데이터 구분용), 선택양식(데이터 구분 (개별 데이터X, 그룹 데이터 구분용))
 * `value` : 입력양식(초기값), 선택양식(개별 데이터 구분용)
-
-
-
-
-
-### disabled
-* 필드 비활성화
-* ex)회원 정보 변경에서 수정을 하면 안 되는 부분들에 주로 사용
-### 
-* 페이지 로딩 시 컨트롤 자동으로 포커스 설정
-### autocomplete
-* 자동완성 기능
-* 속성에 `autocomlete=on`을 입력해서 활성화
-## 속성선택자 (form관련 주로 사용)
+### 속성선택자 (form관련 주로 사용)
 * 태그[속성] 태그에 속성이 있을 때
 * 태그[속성=값] 속성의 값이 이것일 때
 * 태그[속성^=값] 속성 값이 이것으로 시작할 때
 * 태그[속성$=값] 속성 값이 이것으로 끝날 때
 * 태그[속성*=값] 속성 값이 이것을 포함할 때
+## CSS Layout
+### float, flex
+* `float` : 형제 관계에 해당하는 block 또는 inline tag 왼쪽, 오른쪽 정렬할 때 사용
+* 예) ul - li*3개 정룔 `ul li {float:left;}`
+* `flex` : 정렬하고자 하는 아이템의 부모한테 flex를 먼저 설정
+* 예) ul - li*3개 정렬 `ul {display:flex}`
+* flex 설정 시 **기본값** : 메인축(수평) 교차축(수직)
+* `display:flex` : 정렬대상의 부모 설정 속성값, 설정 시 해당 부모 기준 자식까지(자손X) flexible box layout으로 처리하겠다
+* `display: inline-flex;` : 내용 만큼만 넓어짐
+* `flex-direction` : 부모속성, 아이템 정렬 방향 (메인축) column(수직), row(수평) 를 값으로 입력해서 사용
+* `flex-wrap` : 부모속성에 적용, 내부 item들이 크기에 따라 줄바꿈 처리를 할 때 사용
+* `flex-flow` : 부모속성에 적용, flex-direction과 flex-wrap을 묶음으로 처리함 
+* 예) `flex-direction:column + flex-wrap:nowrap` -> `flex-flow:column nowrap` 으로 작성
+* 브라우저 너비는 기본값이 있지만 높이는 기본값을 정해두지 않고 내용 만큼만 인식하기 때문에 wrap을 넣어도 변형을 확인할 수 없음
+* `justify-content` : container에 적용하는 속성으로 메인축의 정렬방법을 설정
+- **flex-start** : items의 시작점, container의 시작점으로 정렬
+- **flex-end** : items의 시작점, container의 끝점으로 정렬
+- **center** : items을 메인축 기준 container에서 가운데 정렬
+- **space-between** : items을 container의 start, end 양끝 items을 배치하고 나머지는 고르게 정렬
+- space-around : items을 container안에서 균등한 여백을 포함하여 정렬
+* `align-content` : container에 적용하는 속성으로 교차축의 아이템이 2줄 이상일 경우 정렬방법. `flex-wrap:wrap;`을 적용한 상태로 확인 가능
+- **stretch** : 기본값. 교차축 기준으로 아이템 늘리기
+- **flex-start** : container의 start지점 기준 item 정렬
+- **flex-end** : container의 end지점 기준 item 정렬
+- **center** : container의 가운데 위치 기준 item 정렬
+- **space-between** : container의 start, end 에 양쪽 끝 맞추고 나머지 item 균등하게 정렬
+- **space-around** : container에서 모든 item 균등하게 정렬
+* `align-items` : container에 적용하는 속성으로 교차축의 아이템이 1줄 일 경우 정렬방법
+- **flex-start**: 왼쪽/위 **flex-end**:오른쪽/아래 **center**: 수직 중앙/ 수평 중앙 **baseline**: 왼쪽/위
+* `align-self` : item에 적용하는 속성으로 container에 적용하는 align-items보다 우선순위가 높음. flex box의 교차축을 정렬
+- **flex-strat** : 교차축 기준 container의 시작 위치 **flex-end** : 교차축 기준 container의 종료 위치 **center** : 교차축 기준 중앙 위치
+* `order` : item에 적용하는 속성으로 아이템의 정렬 순서 설정. 너무 큰 값은 쓰지 않도록 주의. ex) -1, 0 ,1 ...
+* `flex` : item에 적용하는 속성으로 증가/감소/기본의 묶음 속성
+- 수정할 수 있는 아이템에 일정한 비율을 적용하고 싶을 때 상대값인 % 를 사용하지 않도록 주의 `flex:nn%;` -> `flex:1;`
+## Position
+<!-- =========================작성예정 -->
+
+## Font-Awesome
+* Font-Awesome이란? - 웹사이트에서 많이 사용하는 아이콘을 모아놓은 툴킷
+* Font-Awesome HTML로 가져올 땐 인라인 구조로 가져온다
+### HTML 적용법 (i태그 활용)
+* 1 - font-awesome 사이트에서 적용하려는 아이콘의 HTML 코드를 복사한다
+* 2 - 폰트어썸을 사용하려면 관련 CDN 주소를 가져와서 link에 넣어 적용한다
+### CSS - font-awesome 적용법 (Unicode 활용)
+* 1 - font-awesome CDN link태그로 준비한다
+* 2 - awesome 전용의 font-family와 weight를 설정한다
+* 3 - awesome 적용될 태그를 준비한다
+* 4 - 준비한 3번 태그에 가상선택자(after of before)를 삽입힌다
+* 5 - 가상선택자에 content속성을 입력해서 Unicode를 삽입한다

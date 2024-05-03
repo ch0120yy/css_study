@@ -254,13 +254,45 @@ main .bg7 section p {
 }
 main .bg7 section p:last-child {margin: 0;}
 /* ----------------------------------- 8. WWF 다양한 활동 ----------------------------------- */
-main .bg8 {}
-main .bg8 section {}
-main .bg8 section h2 {}
-main .bg8 section .box_contents {}
-main .bg8 section .box_contents .box_bg {}
-main .bg8 section .box_contents .box_bg:last-of-type {
-    
+main .bg8 {background-image:url(../images/bg_8.jpg);}
+main .bg8 section {padding: 94px 0 100px;}
+main .bg8 section .sub_title {
+    text-align: center; color: #000;
+    margin: 0 0 50px;
 }
-main .bg8 section .box_contents .box_bg dt {}
-main .bg8 section .box_contents .box_bg dd {}
+main .bg8 section .container {
+    display: flex;
+    justify-content: space-between;
+}
+main .bg8 section .container > * {
+    width: calc((100% - 30px) / 2); 
+}
+main .bg8 section .container .left {/* flex: 1; */}
+main .bg8 section .container .left li {
+    height: 235px; background-color: tomato;
+    background-image: url(../images/wwf_img1.jpg);
+}
+main .bg8 section .container .left li:last-child {
+    background-image: url(../images/wwf_img2.jpg);
+    margin: 30px 0 0;
+}
+main .bg8 section .container .right {
+    background-image: url(../images/wwf_img3.jpg);
+}
+/* ====================================== bg8 공통 dl, dt, dd */
+main .bg8 section .container .left li,
+main .bg8 section .container .right {position: relative;}
+main .bg8 section .container /* 중간부모 생략 */ dl {
+    background-color: rgba(5, 5, 5, .7); 
+    position: absolute; left: 0; bottom: 25px;
+    width: 100%;
+    padding: 20px;
+    /* absolute 설정 요소는 블록 요소여도 inline-block처럼 내용 크기 만큼만 인식함 */
+    /* absolute 설정 요소의 기본 너비 100%를 유지하고 싶다면 absolute는 inline-block처럼 너비를 내용만큼만 인식하니까 반드시 width:100%를 추가로 입력해서 적용해야 함 */
+}
+main .bg8 section .container dl * {color: #fff; }
+main .bg8 section .container dl dt {
+    font-size: 1.625rem; font-weight: 700;
+    margin-bottom: 8px;
+}
+main .bg8 section .container dl dd {font-size: 1.25rem; letter-spacing: -.2px;}
