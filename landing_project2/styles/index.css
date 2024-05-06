@@ -1,4 +1,4 @@
-/* main {background-color: royalblue;} */
+main {background-color: #FFF;}
 /* 배경 + 1250px + btn 공통 적용 */
 main .bg {
     background-position: center;
@@ -301,14 +301,14 @@ main .bg8 .width_area p {
     line-height: 1.6; letter-spacing: -0.2px;
 }
 /* ========================= 개별적용 구간 */
-main .bg6 {}
+main .bg6 {background-color: #F5F5F5;}
 main .bg6 .width_area {padding: 224px 0 40px;}
 main .bg6 .width_area .bg6_img {}
 main .bg6 .width_area .bg6_img img {}
 main .bg6 .width_area .mobile .sub_title {}
 main .bg6 .width_area p {}
 /* ============================ bg7.굿닥 검색 ============================ */
-main .bg7 {}
+main .bg7 {background-color: #F5F5F5}
 main .bg7 .width_area {padding: 40px 0;}
 main .bg7 .width_area .mobile {text-align: right; margin: 0 54px 0;}
 main .bg7 .width_area .mobile .sub_title {}
@@ -317,7 +317,7 @@ main .bg7 .width_area .mobile p {}
 main .bg7 .width_area .bg7_img {}
 main .bg7 .width_area .bg7_img img {}
 /* ============================ bg8.굿닥 온라인접수 ============================ */
-main .bg8 {}
+main .bg8 {background-color: #F5F5F5}
 main .bg8 .width_area {padding: 40px 0 224px;}
 main .bg8 .width_area .bg8_img {}
 main .bg8 .width_area .bg8_img img {}
