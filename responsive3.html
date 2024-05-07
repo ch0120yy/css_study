@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼핑몰 상품 구현 반응형웹</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* min~1000px */
+        /* @media screen and (min-width:320px) {
+            #app {
+                background-color: aqua;
+                width: 100%;
+                margin: 30px auto;
+                min-width: 320px;
+                max-width: 1000px;
+            }
+            #app .product {
+                background-color: yellowgreen;
+                margin: 0 16px;
+                display: flex; flex-flow: row wrap;
+                justify-content: space-between;
+            }
+            #app .product .item {
+                background-color: lightgray;
+                height: 120px; width:calc((100% / 2) - 10px);
+                margin: 0 0 20px;
+                font-size: 2.25rem; text-align:center;
+            }
+        }
+        @media screen and (min-width:480px){
+            #app .product .item {
+                width: calc((100% / 3) - 10px);
+            }
+        }
+        @media screen and (min-width:760px){
+            #app .product .item{
+                width: calc((100% / 4) - 10px);
+            }
+        } */
+        /* max 100%(1920px)-1000px(d)-760px(t)-480px-320px(m) */
+        /* 1000px 이상일 때 */
+        #app {
+            min-width: 320px;
+            max-width: 1000px;
+            width: 100%; /* 기본값 */
+            margin: 0 auto; background:darkgray;
+        }
+        #app .product {
+            display: flex; flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        #app .product .item {
+            background-color: tomato;
+            margin: 0 0 50px; overflow: hidden;
+            width:calc((100% / 4) - 10px);
+            /* img~em~span 자식 정렬 flex */
+            display: flex; flex-flow: column wrap;
+        }
+        #app .product .item img {}
+        #app .product .item em {
+            color: yellow; padding: 12px 0;
+        }
+        #app .product .item span {color: white;}
+        #app .product .item span del {color: skyblue;}
+        /* ================ media 조건시작 */
+        @media screen and (max-width:1000px){
+            #app {padding: 0 16px;}
+            #app .product .item {
+                width: calc((100% / 4) - 10px);
+                /* 761px~1000px(max)일 때 */
+            }
+        }
+        @media screen and (max-width:760px){
+            #app .product .item{
+                width: calc((100% / 3) - 10px);
+                /* 481px~760px 일 때 */
+            }
+        }
+        @media screen and (max-width:480px){
+            #app .product .item {
+                width: calc((100% / 2) - 10px);
+                /* 480px 이하일 때 (320~480) */
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="product">
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+            <a href="#" class="item">
+                <img src="./images/img1.jpg" alt="">
+                <em>상품명</em>
+                <span>12,000원 <del>20,000원</del></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
