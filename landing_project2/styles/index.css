@@ -1,298 +1,522 @@
-main {background-color: orange;}
-/* 배경 공통&개별값 + 공통제목 + 공통 후원 버튼 */
+main {background-color: #FFF;}
+/* 배경 + 1250px + btn 공통 적용 */
 main .bg {
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size:cover; /* 영역의 크기가 늘어나도 배경 이미지가 비율에 맞게 여백 없이 씌워주는 값 */
+    background-size: cover;
 }
-/* 공통 bg 1250 적용 */
-main .bg > section {
+/* 1250px 적용 */
+main .bg > div {
     width: 1250px; margin: 0 auto;
-    /* background-color: brown; */
+    color: #050505;
+    /* background-color: aqua; */
 }
-main .bg section .sub_title {
-    font-size: 3.438rem; letter-spacing: -0.1px;
-    font-weight: 500; color: #FFF; line-height: 1.2;
+/* 중제목 적용 */
+main .bg .width_area .sub_title {
+    font-size: 3.438rem; font-weight: 500;
+    line-height: 1.3; letter-spacing: -0.2px;
 }
-main .bg section .sponsor_link::after {
-    /* 존재하지 않는 요소. CSS로 디자인에 활욜할 때 사용함 */
-    content:'';
-    background-image:url(../images/btn_right_arrow.svg);
-    background-repeat:no-repeat;
-    display: inline-block;
-    width:32px; height:32px;
+/* 버튼 적용 */
+main .bg .width_area .down_load_btn {
+    display: flex;
+    border-radius: 50px;
 }
-main .bg section .sponsor_link {
+main .bg .width_area .down_load_btn .app::before {
+    content: '';
+    background-image:url(../images/app_store_btn.png);
+    background-repeat: no-repeat;
+    width: 30px; height: 37px;
+}
+main .bg .width_area .down_load_btn .google::before {
+    content: '';
+    background-image:url(../images/google_play_btn.png);
+    background-repeat: no-repeat;
+    width: 30px; height: 37px;
+}
+main .bg .width_area .down_load_btn .store_btn {
+    font-size: 1.625rem; font-weight: 500;
+    background-color: #F0F0F0; border: 1px solid #FFF;
+    width: 265px; height: 76px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* text-align: center; line-height: 71px; */
-    width: 404px; height: 71px;
-    margin: 0 auto;
-    font-size: 2.125rem; font-weight: 700; color: #FFF;
-    /* 0% FE9300, 100% FF7300 */
-    /* CSS 회전각도 단위 deg */
-    background: linear-gradient(90deg, #FE9300,#FF7300);
-    /* gradient 적용을 위해 backgroun 통합 속성을 사용했을 때
-    해당 요소 추가 배경이미지 꾸미기를 원한다면 가상 선택자(before, after)를 활용하는 것을 권장 */
-    border-radius: 50px;
-}
-main .bg1 {
-    background-image:url(../images/bg.jpg);
-    height: 1002px;
-}
-/* ----------------------------------- 1. 표지 ----------------------------------- */
-main .bg1 section {}
-main .bg1 section h1 {}
-main .bg1 section h1 a {}
-main .bg1 section h1 a img {}
-main .bg1 section h2 {
-    text-align: center;
-    font-size: 4.375rem; color: #FFF;
-    letter-spacing: -0.2px; line-height: 1.2; /* 행간 120% */
-    margin: 150px 0 57px;
-}
-main .bg1 section h2 em {font-weight: 700;}
-main .bg1 section .sponsor_question::before,
-main .bg1 section .sponsor_question::after {
-    content: '';
-    background-repeat:no-repeat;
-    display:inline-block;
-    background-size: 26px;
-    width: 26px; height: 26px;
-}
-main .bg1 section .sponsor_question::before {
-    background-image:url(../images/icon_sms.svg);
-    margin-right: 5px;
-}
-main .bg1 section .sponsor_question::after {
-    background-image:url(../images/btn_right_arrow.svg);
-}
-main .bg1 section .sponsor_question {
-    background-color: #050505; color: #FFF;
-    display: flex;
-    justify-content:center;
     align-items:center;
-    float: right;
-    /* line-height:51px; text-align: center; */
-    height:51px; width:407px;
-    border-radius: 50px;
-    font-size: 1.625rem; margin-top: 155px;
+    border-radius: 50px; overflow: hidden;
 }
-/* ----------------------------------- 2. 퀴즈 ----------------------------------- */
-main .bg2 {
-    background-image:url(../images/bg_2.jpg);
-    /* height: 540px; */ /* 높이는 알아서 커지게끔 두는 게 좋음 */
+main .bg .width_area .down_load_btn .store_btn::before {padding-left: 5px;}
+/* ============================ bg1.메인 ============================ */
+main .bg1 {
+    background-image:url(../images/bg1.jpg); 
+    border-radius: 0 0 300px; overflow: hidden;
 }
-/* ----------------------------------- 2. 퀴즈 ----- 퀴즈 -------------- */
-main .bg2 section {
-    display: flex; /* flex의 item 기본 메인축 정렬은 수평 */
-}
-main .bg2 section > * {flex: 1; /* width: 50%; */}
-main .bg2 section #quiz_frm {
-    padding: 42px 0 56px;
-}
-main .bg2 section #quiz_frm .quiz_contents {color: #FFF;}
-main .bg2 section #quiz_frm .quiz_contents .sub_title {
-    margin: 0 0 26px;
-    width: 450px; text-align: center;
-}
-main .bg2 section #quiz_frm .quiz_contents h2+p {
-    font-size: 1.25rem; line-height: 1.7;margin: 0 0 17px;
-}
-main .bg2 section #quiz_frm .quiz_contents .quiz_list {margin: 0 0 28px;}
-main .bg2 section #quiz_frm .quiz_contents .quiz_list li {margin: 0 0 20px;font-size: 1.25rem;}
-main .bg2 section #quiz_frm .quiz_contents .quiz_list li:last-child {margin: 0;}
-main .bg2 section #quiz_frm .quiz_contents .quiz_list li input[name=quiz_q] {display: none;}
-main .bg2 section #quiz_frm .quiz_contents .quiz_list li label {
-    background-image:url(../images/quiz_unchecked.svg);
-    background-repeat: no-repeat;
-    padding-left: 48px; /* 너비 28px+ 여백 20px */
-    line-height: 28px; /* 정렬할 수 있어서 height 보다 예쁘게 적용됨 */
-    display: inline-block;
-}
-main .bg2 section #quiz_frm .quiz_contents .quiz_list+p {}
-main .bg2 section #quiz_frm .quiz_contents .quiz_list+p #answer_btn {
-    background-color: #050505; color: #FFF; border: 0;
-    border-radius: 50px; width: 450px; line-height: 39px;
-}
-/* ----------------------------------- 2. 퀴즈 ----- 퀴즈(인풋 체크 시 활성화 label 디자인) -------------- */
-main .bg2 section #quiz_frm .quiz_contents .quiz_list li input[name=quiz_q]:checked + label {
-    background-image:url(../images/quiz_checked.svg) ;
-}
-/* ----------------------------------- 2. 퀴즈 ----- 참여현황 -------------- */
-main .bg2 .quiz_participation {
-    padding: 134px 0 0; 
-    display: flex; flex-flow: column wrap; 
-    /* flex의 기본 값은 수평이므로 수직으로 바꿔주는 flex-flow:column */
-    align-items: flex-end;
-}
-main .bg2 .quiz_participation .status {
-    width: 500px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-main .bg2 .quiz_participation .status h2::before {
-    background-image:url(../images/icon_person.svg);
-    content: '';
-    display: inline-block;
-    width: 42px; height:42px;
-}
-main .bg2 .quiz_participation .status h2 {
-    background-color: #FE9300; color: #FFF;
-    font-size: 1.625rem; line-height: 60px;
-    display: flex;
-    justify-content: center; align-items: center; 
-}
-main .bg2 .quiz_participation .status .contents {
-    background-color: #FFF; text-align: center;
-    padding: 40px 0;
-}
-main .bg2 .quiz_participation .status .contents em {
-    font-size: 4.375rem; font-weight: 700; letter-spacing: -0.2px;
-    color: #FF7300;
-}
-main .bg2 .quiz_participation .status .contents span {color: #FF7300;}
-main .bg2 .quiz_participation .status .contents strong {}
-main .bg2 .quiz_participation .status .contents span,
-main .bg2 .quiz_participation .status .contents strong {
-    font-size: 2.125rem; font-weight: 700;
-}
-main .bg2 .quiz_participation p {
-    font-size: 1.25rem; color: #FFF;
-    margin-top: 20px;
-}
-/* ----------------------------------- 3. 새끼 북극곰의 이야기 ----------------------------------- */
-main .bg3 {background-image:url(../images/bg_3.jpg);}
-main .bg3 section {padding: 123px 0 135px; text-align: center;}
-main .bg3 section .sub_title {color: #000;}
-main .bg3 section #video {width: 900px; height: 600px; margin: 70px 0;}
-main .bg3 section a {}
-/* ----------------------------------- 4. 빙하 면적 50% 감소 ----------------------------------- */
-main .bg4 {background-image:url(../images/bg_4.jpg);}
-main .bg4 section {}
-main .bg4 section .sub_title {}
-main .bg4 section .sub_title em {}
-main .bg4 section .sub_title+p {}
-main .bg4 section p:last-child {}
-main .bg4 section p:last-child img {}
-/* ----------------------------------- 5. 빙하감소 ----------------------------------- */
-main .bg5 {background-image:url(../images/bg_5.jpg) ;}
-main .bg5 section {padding: 76px 0 140px; text-align: center;}
-main .bg5 section .sub_title {color: #050505;}
-main .bg5 section .sub_title+p {
-    font-size: 1.625rem; line-height: 1.2; color: #050505;
-    margin: 30px 0 92px;;
-}
-main .bg5 section .container {
-    display: flex;
-}
-main .bg5 section .container li {
-    flex:1; margin-right: 45px;
-    text-align: center;
-}
-main .bg5 section .container li:last-child {margin-right: 0;}
-main .bg5 section .container li .box_img {
-    background-image:url(../images/box_img1.jpg);
-    height: 320px; padding: 47px;
-}
-main .bg5 section .container li:nth-of-type(2) .box_img {background-image:url(../images/box_img2.jpg);}
-main .bg5 section .container li:last-of-type .box_img {background-image:url(../images/box_img3.jpg) ;}
-main .bg5 section .container li .box_img h3 {
-    font-size: 2.625rem; font-weight: 700;
-    line-height: 1.2; color: #FFF;
-    margin-bottom: 10px;
-}
-main .bg5 section .container li .box_img p {
-    font-size: 1.625rem; line-height: 1.2; color: #FFF;
-}
-main .bg5 section .container li .contents {
-    background-color: #FFF;
-    font-size: 1.25rem; line-height: 1.7;
-    height: 250px;
-    padding: 20px 37px 0;
-}
-/* ----------------------------------- 6. 지구 전체의 위기 ----------------------------------- */
-main .bg6 {background-image:url(../images/bg_6.jpg);}
-main .bg6 section {}
-main .bg6 section .sub_title {}
-main .bg6 section .sub_title em {}
-main .bg6 section .sub_title+p {}
-main .bg6 section p:last-child {}
-main .bg6 section p:last-child img {}
-/* ----------------------------------- 4,5,6 그룹 선택자 ----------------------------------- */
-main .bg4 section,
-main .bg5 section,
-main .bg6 section {padding: 94px 0 100px;}
-main .bg4 section .sub_title,
-main .bg6 section .sub_title {}
-main .bg4 section .sub_title em,
-main .bg6 section .sub_title em {
-    background-color: #FFF; color: #2E3148;
-    display: inline-block;
-    font-weight: 500; padding: 10px 0;
-}
-main .bg4 section .sub_title+p,
-main .bg6 section .sub_title+p {
-    font-size:2.125rem; font-weight: 500; line-height: 1.2;
-    color:#FFF; margin: 50px 0;
-}
-main .bg4 section p:last-child,
-main .bg6 section p:last-child {}
-main .bg4 section p:last-child img,
-main .bg6 section p:last-child img {}
-/* ----------------------------------- 7. 믿을 수 있는 WWF ----------------------------------- */
-main .bg7 {background-image:url(../images/bg_7.jpg);}
-main .bg7 section {padding: 94px 0 80px; text-align: center;}
-main .bg7 section h1 {
-    font-size: 4.375rem; line-height: 1.2;
-    letter-spacing: -0.2px; font-weight: 700;
-}
-main .bg7 section p {
-    font-size: 2.125rem; line-height: 1.2;
-    margin: 74px 0;
-}
-main .bg7 section p:last-child {margin: 0;}
-/* ----------------------------------- 8. WWF 다양한 활동 ----------------------------------- */
-main .bg8 {background-image:url(../images/bg_8.jpg);}
-main .bg8 section {padding: 94px 0 100px;}
-main .bg8 section .sub_title {
-    text-align: center; color: #000;
-    margin: 0 0 50px;
-}
-main .bg8 section .container {
+/* ======================== 헤더 영역 ================= */
+main .bg1 header {
+    width: 1920px;
+    margin-bottom: 160px;
+    padding: 30px 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-main .bg8 section .container > * {
-    width: calc((100% - 30px) / 2); 
+main .bg1 header #logo {}
+main .bg1 header #logo a {}
+main .bg1 header #logo a img {}
+main .bg1 header #gnb {}
+main .bg1 header #gnb p {
+    display: inline-block; margin-right: 20px;
 }
-main .bg8 section .container .left {/* flex: 1; */}
-main .bg8 section .container .left li {
-    height: 235px; background-color: tomato;
-    background-image: url(../images/wwf_img1.jpg);
+main .bg1 header #gnb p:last-child {margin:0;}
+main .bg1 header #gnb p a {
+    font-size: 1.25rem; font-weight: 700;
+    color: #FFF; letter-spacing: -0.2px;
 }
-main .bg8 section .container .left li:last-child {
-    background-image: url(../images/wwf_img2.jpg);
-    margin: 30px 0 0;
+/* =============================== 1250 너비 적용 구간================= */
+main .bg1 .width_area {padding: 0 0 40px 30px;}
+main .bg1 .width_area h2 {
+    font-size:4.375rem; color: #FFF;
+    font-weight: 700; line-height: 1.3;
 }
-main .bg8 section .container .right {
-    background-image: url(../images/wwf_img3.jpg);
+main .bg1 .width_area h2 em {font-weight: 900; color:#0060FF;}
+main .bg1 .width_area p {
+    color: #FFF;
+    font-size: 1.875rem; letter-spacing: -0.2px;
+    margin: 24px 0 64px; line-height: 1.3;
 }
-/* ====================================== bg8 공통 dl, dt, dd */
-main .bg8 section .container .left li,
-main .bg8 section .container .right {position: relative;}
-main .bg8 section .container /* 중간부모 생략 */ dl {
-    background-color: rgba(5, 5, 5, .7); 
-    position: absolute; left: 0; bottom: 25px;
+main .bg1 .width_area .down_load_btn {}
+
+main .bg1 .width_area .down_load_btn .store_btn {}
+main .bg1 .width_area .down_load_btn .google {margin: 0 15px 193px;}
+/* ========================================= 페이지 버튼 */
+main .bg1 .width_area .next_page {
+    width: 50px; height: 50px; background-color: #f5f5f5;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+main .bg1 .width_area .next_page img {}
+
+/* ============================ bg2.퀴즈 ============================ */
+main .bg2 {background-color: #FFF;} /* 배경 흰색 */
+main .bg2 .width_area {padding: 135px 0;}
+main .bg2 .width_area .quiz_top {
+    border-bottom: 1px solid #AAA;
+    padding: 5px 0; margin-bottom: 57px;
+}
+main .bg2 .width_area .quiz_top h2 {color: #41D293;}
+main .bg2 .width_area .quiz_top p {
+    font-size: 2.125rem; font-weight: 700;
+    line-height: 1.6; letter-spacing: -0.2px;
+}
+/* =============================== 퀴즈 폼 =================== */
+main .bg2 .width_area .quiz_area {
+    display: flex; justify-content: space-around; align-items: center;
+    padding: 0 98px;
+}
+main .bg2 .width_area .quiz_area #quiz_frm {}
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents {width: 400px;}
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents .quiz_g {margin-bottom: 30px;}
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents .quiz_g li {}
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents .quiz_g li:last-child {margin: 0;}
+
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents .quiz_g li input[name^=quiz] {display: none;}
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents .quiz_g li input[name^=quiz]:checked+label {
+    background-color: #0060FF; color: #F5F5F5;
+}
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents .quiz_g li label {
+    background-color: #EDEDED; padding: 0 52px;
+    line-height: 71px;
     width: 100%;
-    padding: 20px;
-    /* absolute 설정 요소는 블록 요소여도 inline-block처럼 내용 크기 만큼만 인식함 */
-    /* absolute 설정 요소의 기본 너비 100%를 유지하고 싶다면 absolute는 inline-block처럼 너비를 내용만큼만 인식하니까 반드시 width:100%를 추가로 입력해서 적용해야 함 */
+    display: inline-block;
 }
-main .bg8 section .container dl * {color: #fff; }
-main .bg8 section .container dl dt {
+/* -------------------------------- 퀴즈 영역 + 버튼 공통 적용 */
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents .quiz_g li,
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents p #answer_btn {
     font-size: 1.625rem; font-weight: 700;
-    margin-bottom: 8px;
+    letter-spacing: -0.2px; margin-bottom: 10px;
+    border-radius: 50px; overflow: hidden;
 }
-main .bg8 section .container dl dd {font-size: 1.25rem; letter-spacing: -.2px;}
+/* 퀴즈영역 + 힌트 가운데 장식요소 */
+main .bg2 .width_area .quiz_area .quiz_hint::before {
+    content: '';
+    background-image:url(../images/bg2_arrow.png);
+    background-repeat: no-repeat;
+    display: inline-block; background-size: 43px 258px;
+    width: 43px; height: 258px;
+    margin: 0 76px;
+}
+/* ----------------------------- 버튼 영역 */
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents p {}
+main .bg2 .width_area .quiz_area #quiz_frm .quiz_contents p #answer_btn {
+    width: 100%; line-height: 71px; color: #41D293;
+    background-color: #FFF; border: 2px solid #5DC799;
+}
+/* ===================== 퀴즈 힌트 =================== */
+main .bg2 .width_area .quiz_area .quiz_hint {
+    display: flex;
+    height: 258px;
+    display: flex; flex-flow: column wrap;
+}
+main .bg2 .width_area .quiz_area .quiz_hint h3 img {margin-bottom: 5px;}
+main .bg2 .width_area .quiz_area .quiz_hint p {
+    width: 466px;
+    line-height: 23px; margin-bottom: 16px;
+}
+main .bg2 .width_area .quiz_area .quiz_hint p:last-child {margin-bottom: 16px;}
+/* ============================ bg3.동영상 ============================ */
+main .bg3 {background-image:url(../images/bg3.jpg);}
+main .bg3 .width_area {
+    padding: 280px 0;
+    display: flex; justify-content: space-between; align-items: center;
+}
+main .bg3 .width_area iframe {border-radius: 10px; box-shadow: 0 0 20px 0 rgba(146, 127, 113, .6);}
+main .bg3 .width_area .bg3_contents {}
+main .bg3 .width_area .bg3_contents h2 {
+    font-size: 2.25rem; color: #F5F5F5;
+    line-height: 1.6; letter-spacing: -0.2px;
+    text-align: center;
+}
+main .bg3 .width_area .bg3_contents h2 em {font-weight: 700; letter-spacing: 0;}
+main .bg3 .width_area .bg3_contents h2 em:last-of-type {color: #72F4BC;}
+main .bg3 .width_area .bg3_contents .info_btn {
+    display: flex; justify-content: center; margin-top: 40px;
+}
+main .bg3 .width_area .bg3_contents .info_btn a {
+    font-size: 1.625rem; font-weight: 700;
+    line-height: 1.2; letter-spacing: -0.2px;
+    width: 270px;
+    padding: 16px 10px; background-color:rgba(255, 255, 255, .7);
+    border-radius: 40px; border: 1px solid #FFF;
+    display:flex; justify-content: center;
+}
+/* 버튼 간격 조정 */
+main .bg3 .width_area .bg3_contents .info_btn a:first-child {margin-right: 27px;}
+main .bg3 .width_area .bg3_contents .info_btn a::before {
+    width: 30px; height: 30px;
+    display: inline-block; margin-right: 3px;
+    content: '';
+    background-image: url(../images/icon_untact.svg);
+    background-repeat: no-repeat;
+}
+main .bg3 .width_area .bg3_contents .info_btn a:last-of-type:before {
+    content: '';
+    background-image:url(../images/icon_mobile_reserve.svg);
+    background-repeat: no-repeat;
+}
+/* ============================ bg4.굿닥의 의료 제안 ============================ */
+main .bg4 {background-image:url(../images/bg4.jpg);}
+main .bg4 .width_area {padding: 164px 0;}
+main .bg4 .width_area h2 {color: #F5F5F5; margin-bottom: 57px;}
+main .bg4 .width_area h2 em {font-weight: 300; line-height: 80px;}
+main .bg4 .width_area .proposal_service {
+    display: flex;
+}
+main .bg4 .width_area .proposal_service dl {
+    border-radius: 30px; overflow: hidden;
+    margin-left: 47px;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+main .bg4 .width_area .proposal_service dl:first-of-type {margin: 0;}
+main .bg4 .width_area .proposal_service dl .service {
+    padding: 22px ; display: flex; 
+    justify-content: center; align-items: center;
+    background-color: rgba(0, 96, 255, .8);
+    font-size: 2.125rem; font-weight: 500; color: #F5F5F5;
+    line-height: 1.6; letter-spacing: -0.2px;
+}
+main .bg4 .width_area .proposal_service dl .service::before {
+    content: '';
+    background-repeat: no-repeat;
+    width: 50px; height: 50px; margin-right: 10px;
+    display: inline-block;
+}
+main .bg4 .width_area .proposal_service dl .t1 {}
+main .bg4 .width_area .proposal_service dl .t1::before {background-image:url(../images/bg4_icon1.svg);}
+main .bg4 .width_area .proposal_service dl .t2::before {background-image:url(../images/bg4_icon2.svg);}
+main .bg4 .width_area .proposal_service dl .t3::before {background-image:url(../images/bg4_icon3.svg);}
+main .bg4 .width_area .proposal_service dl dd {
+    height: 156px; width: 385px; height: 196px;
+    padding: 30px 26px 70px;
+    font-size: 1.25rem; line-height: 1.6;
+    background-color: rgba(255, 255, 255, .8);
+}
+/* ============================ bg5.굿닥 개인정보 ============================ */
+main .bg5 {
+    background-image:url(../images/bg5.jpg);
+    padding: 159px 30px;
+}
+main .bg5 .width_area {
+    padding: 70px 50px; width: 1190px;
+    background-color: rgba(255, 255, 255, .4);
+    border: 1px solid #FFF; border-radius: 30px;
+    box-shadow: 0 0 16px  rgba(48, 102, 193, .2);
+    display: flex;
+    justify-content: center; align-items: flex-end;
+}
+main .bg5 .width_area .bg5_left {margin-right: 60px;}
+main .bg5 .width_area .bg5_left .sub_title {margin-bottom: 40px;}
+main .bg5 .width_area .bg5_left .sub_title span {
+    font-size: 2.563rem; line-height: 1.3;
+    letter-spacing: -0.4px;
+}
+main .bg5 .width_area .bg5_left .sub_title em {
+    font-weight: 700; color: #0060FF;
+}
+main .bg5 .width_area .bg5_left p {
+    font-size: 1.625rem; line-height: 1.6;
+    letter-spacing: -0.2px;
+}
+main .bg5 .width_area .bg5_left p:last-child {
+    margin-top: 30px;
+    font-size: 1.875rem; line-height: 1.6;
+    letter-spacing: -0.2px;font-weight: 500;
+}
+main .bg5 .width_area .bg5_right {}
+main .bg5 .width_area .bg5_right p {}
+main .bg5 .width_area .bg5_right p img {}
+main .bg5 .width_area .bg5_right p:last-child {
+    margin: 10px;
+    font-size: 0.75rem; text-align: center;
+}
+main .bg5 .width_area .bg5_right p em {}
+/* ============================ bg6.굿닥 비대면 진료 ============================ */
+/* bg 6 ~ 8 배경 공통 적용 */
+main .bg6,
+main .bg7,
+main .bg8 { background-color: #F5F5F5;}
+main .bg6 .width_area,
+main .bg7 .width_area,
+main .bg8 .width_area {display: flex; justify-content: center; align-items: center;}
+main .bg .width_area .mobile {margin-left: 54px;}
+/* bg 6, 7, 8 폰트 공통 적용 */
+main .bg .width_area .mobile .sub_title em {
+    color: #F5F5F5; background-color: #0060FF;
+    line-height: 1.3; margin: 0 0 40px;
+    display: inline-block;
+}
+main .bg6 .width_area p,
+main .bg7 .width_area p,
+main .bg8 .width_area p {
+    font-size: 2.125rem;
+    line-height: 1.6; letter-spacing: -0.2px;
+}
+/* ========================= 개별적용 구간 */
+main .bg6 {background-color: #F5F5F5;}
+main .bg6 .width_area {padding: 224px 0 40px;}
+main .bg6 .width_area .bg6_img {}
+main .bg6 .width_area .bg6_img img {}
+main .bg6 .width_area .mobile .sub_title {}
+main .bg6 .width_area p {}
+/* ============================ bg7.굿닥 검색 ============================ */
+main .bg7 {background-color: #F5F5F5}
+main .bg7 .width_area {padding: 40px 0;}
+main .bg7 .width_area .mobile {text-align: right; margin: 0 54px 0;}
+main .bg7 .width_area .mobile .sub_title {}
+main .bg7 .width_area .mobile .sub_title em {background-color: #41D293;}
+main .bg7 .width_area .mobile p {}
+main .bg7 .width_area .bg7_img {}
+main .bg7 .width_area .bg7_img img {}
+/* ============================ bg8.굿닥 온라인접수 ============================ */
+main .bg8 {background-color: #F5F5F5}
+main .bg8 .width_area {padding: 40px 0 224px;}
+main .bg8 .width_area .bg8_img {}
+main .bg8 .width_area .bg8_img img {}
+main .bg8 .width_area .mobile {}
+main .bg8 .width_area .mobile .sub_title {}
+main .bg8 .width_area .mobile .sub_title em {}
+main .bg8 .width_area .mobile p {}
+/* ============================ bg9.굿닥 4step ============================ */
+main .bg9 {background-image:url(../images/bg9.jpg);}
+main .bg9 .width_area {}
+main .bg9 .width_area .step4_top {overflow: hidden;}
+main .bg9 .width_area .step4_top dl {
+    display: flex; align-items: center;
+}
+main .bg9 .width_area .step4_top dl:first-of-type {margin-top: 110px;}
+main .bg9 .width_area .step4_top dl dt {
+    display: inline-block;
+}
+main .bg9 .width_area .step4_top dl dd {
+    font-size: 2.125rem; font-weight: 500;
+    line-height: 1.6; 
+    border-radius: 50px; padding: 20px 30px; margin-left: 10px;
+    background-color: #FFF; display: inline-block;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+main .bg9 .width_area .step4_top dl:last-of-type {
+    justify-content: flex-end;
+    margin: 80px 0 90px;
+}
+main .bg9 .width_area .step4_top dl:last-of-type dt {order: 2;}
+main .bg9 .width_area .step4_top dl:last-of-type dd {
+    color: #F5F5F5; padding-bottom: 30px;
+    background-color: #0060FF;
+    order: 1; margin: 0 10px 0;
+}
+main .bg9 .width_area .step4_top .step4_q {}
+main .bg9 .width_area .step4_top .step4_a {}
+main .bg9 .width_area .step4_top dl dt {
+}
+/* 4단계 콘텐츠 */
+main .bg9 .width_area .step4_contents {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+}
+main .bg9 .width_area .step4_contents li:first-of-type {}
+main .bg9 .width_area .step4_contents li {
+    display: flex; flex-flow: column wrap;
+    align-items: center;
+}
+main .bg9 .width_area .step4_contents li h3 {
+    font-size: 1.25rem; color: #FFF;
+    line-height: 1.6; letter-spacing: -0.2px; display: inline-block;
+    padding: 5px 10px; background-color: rgba(0, 96, 255, .8);
+    border: 1px solid #327EFD; border-radius: 30px;
+    margin: 12px 0 4px;
+}
+main .bg9 .width_area .step4_contents li p:last-child{
+    text-align: center; font-size: 1.125rem; line-height: 1.6;
+    margin-bottom: 110px;
+}
+/* ============================ bg10.굿닥 이벤트 페이지 ============================ */
+main .bg10 {background-image:url(../images/bg10.jpg);}
+main .bg10 .width_area {color: #FFF;}
+main .bg10 .width_area h1 {
+    padding: 90px 0 0;
+    margin: 0 0 32px 50px;
+    font-size: 1.625rem; line-height: 1.6; letter-spacing: -0.2px;
+}
+main .bg10 .width_area h1 em {
+    font-size: 2.563rem; font-weight: 700;
+    line-height: 1.6; letter-spacing: -0.2px;
+}
+main .bg10 .width_area .event_title {display: flex; flex-flow: column nowrap; align-items: center;}
+main .bg10 .width_area .event_title p {}
+main .bg10 .width_area .event_title .event_name {
+    color: #41D293; text-align: center;
+    font-size: 2.563rem; font-weight: 700;
+    line-height: 80px; letter-spacing: -0.2px;
+    background-color: #F5F5F5; padding: 0 10px; border-radius: 16px 16px 16px 0;
+}
+main .bg10 .width_area .event_title h2 {
+    font-size: 7.5rem; line-height: 174px;
+    letter-spacing: 2px; text-align: center;
+    width: 1210px; border-bottom: 1px solid #FFF;
+    margin: 0 0 48px;
+}
+main .bg10 .width_area .event_title h2 em {font-weight: 900;}
+/* 이벤트 기간 적용 구간 */
+main .bg10 .width_area .event_title .event_date {
+    font-size: 2.125rem; line-height: 62px; letter-spacing: -0.2px;
+    border-radius: 34px; overflow: hidden;
+    border: 1px solid #FFF; display: flex; align-items: center;
+}
+main .bg10 .width_area .event_title .event_date span:first-child {
+    background-color: #FFF; display: block; font-weight: 500;
+    line-height: 62px; color: #41D293; padding: 0 20px 0 40px ;
+}
+main .bg10 .width_area .event_title .event_date span:last-child {
+    background-color: #91E0BE; color: #FFF; font-weight: 500;
+    padding: 0 40px 0 20px;
+}
+main .bg10 .width_area .event_contents {
+    margin: 24px auto 90px;
+    display: flex; flex-flow: column nowrap; align-items: center;
+}
+main .bg10 .width_area .event_contents p {
+    font-size: 2.563rem; line-height: 1.6; letter-spacing: -0.2px;
+    width: 1120px;
+}
+main .bg10 .width_area .event_contents p span {font-size: 3rem; font-weight: 700; color: #FFF06A;}
+main .bg10 .width_area .event_contents p:last-of-type {margin: 80px 0 60px 130px;}
+main .bg10 .width_area .event_contents p img {display: inline-block;}
+main .bg10 .width_area .event_contents a::after {
+    content: ''; background-image:url(../images/event_btn_arrow.svg);
+    width: 24px; height: 24px; display: inline-block;
+}
+main .bg10 .width_area .event_contents a {
+    font-size: 1.625rem; letter-spacing: -0.2px;
+    color: #050505; background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 45px; border: 1px solid #FFF;
+    margin-bottom: 80px; height: 82px; padding: 0 35px;
+    display: flex; align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+/* 이벤트 관련 공지 배경색 입력*/
+main .bg10 .event_notice_bg {
+    background-color: #3C424F; width: 100%;
+}
+/* 공지 영역 너비 적용 */
+main .bg10 .event_notice_bg .width_area_btm {
+    width: 1014px; color: #AAA; padding: 30px 0;
+    margin: 0 auto; display: flex;
+}
+main .bg10 .event_notice_bg .width_area_btm h3 {
+    font-size: 1.625rem; font-weight: 700; letter-spacing: -0.2px;
+    display: flex; align-items: center;
+}
+main .bg10 .event_notice_bg .width_area_btm h3::after {
+    content: ''; margin: 0 25px;
+    background-color: #AAA;
+    width: 1px; height: 54px; display: inline-block;
+}
+main .bg10 .event_notice_bg .width_area_btm p {letter-spacing: -0.3px; line-height: 1.3;}
+/* ============================ bg11.굿닥 마무리 페이지 ============================ */
+main .bg11 {background-image:url(../images/bg11.jpg);}
+main .bg11 .width_area {padding: 261px 0 278px; text-align: center;}
+main .bg11 .width_area h1 {font-size: 2.875rem; line-height: 1.3;}
+main .bg11 .width_area p {
+    font-size: 4.375rem; font-weight: 500;
+    line-height: 1.3; letter-spacing: -0.2px;
+    margin: 40px 0 144px;
+}
+main .bg11 .width_area .down_load_btn {display: flex; justify-content: center;}
+main .bg11 .width_area .down_load_btn a {margin-right: 15px;}
+main .bg11 .width_area .down_load_btn a:last-child {margin:0}
+/* ============================ bg12.굿닥 footer 페이지 ============================ */
+main .bg12 {background-image:url(../images/bg12.jpg);}
+main .bg12 .width_area {
+    padding: 80px 0;
+    color: #8C8B92; letter-spacing: -0.2px;
+}
+main .bg12 .width_area .ft_wrap {
+    display: flex; justify-content: center;
+}
+main .bg12 .width_area .ft_wrap .ft_contents {
+    display: flex;
+    justify-content: center;
+}
+main .bg12 .width_area .ft_wrap .ft_contents dl {font-weight: 700; margin-right: 30px;}
+main .bg12 .width_area .ft_wrap .ft_contents dl:last-of-type {margin:0;}
+main .bg12 .width_area .ft_wrap .ft_contents dl dt {color: #F5F5F5; font-weight: 700; margin-bottom: 20px;}
+main .bg12 .width_area .ft_wrap .ft_contents dl dd {font-weight: 700; line-height: 1.8;}
+main .bg12 .width_area .ft_wrap .ft_contents dl dd:last-child {margin-top: 20px;}
+main .bg12 .width_area .ft_wrap .ft_contents dl dd address {font-weight: 700;}
+main .bg12 .width_area .ft_wrap .ft_contents dl dd a {font-weight: 700; color: #8C8B92;}
+main .bg12 .width_area .ft_wrap .ft_contents .ft_snb {}
+main .bg12 .width_area .ft_wrap .ft_contents .ft_snb dt {font-weight: 700;}
+main .bg12 .width_area .ft_wrap .ft_contents .ft_snb dd { margin-bottom: 20px;}
+main .bg12 .width_area .ft_wrap .ft_contents .ft_snb dd:last-child { margin: 0;}
+main .bg12 .width_area .ft_wrap .sns_link {margin-left: 293px;}
+main .bg12 .width_area .ft_wrap .sns_link a {margin-right: 16px;}
+main .bg12 .width_area .ft_wrap .sns_link a:last-child {margin: 0;}
+main .bg12 .width_area .ft_last {
+    display: flex; justify-content: center; align-items: center;
+    margin-top: 107px;
+}
+main .bg12 .width_area .ft_last a {
+    font-weight: 700; line-height: 1.8; letter-spacing: -0.2px;
+    color: #F5F5F5; display: flex;
+    align-items: center;
+}
+main .bg12 .width_area .ft_last a::after {
+    content: '';
+    background-color: #F5F5F5;
+    width: 1px; height: 20px;
+    display: inline-block;
+    margin: 0 8px;
+}
+main .bg12 .width_area .ft_last p {font-weight: 700; margin-right: 8px;}
+main .bg12 .width_area .ft_last p:last-child {margin-right: 0;}
