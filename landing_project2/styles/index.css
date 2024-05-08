@@ -60,15 +60,16 @@ main .bg1 header {
 main .bg1 header #logo {}
 main .bg1 header #logo a {}
 main .bg1 header #logo a img {}
-main .bg1 header #gnb {}
-main .bg1 header #gnb p {
+main .bg1 header .snb {}
+main .bg1 header .snb p {
     display: inline-block; margin-right: 20px;
 }
-main .bg1 header #gnb p:last-child {margin:0;}
-main .bg1 header #gnb p a {
+main .bg1 header .snb p:last-child {margin:0;}
+main .bg1 header .snb p a {
     font-size: 1.25rem; font-weight: 700;
     color: #FFF; letter-spacing: -0.2px;
 }
+main .bg1 header .snb p a:hover {color: #5093ff;}
 /* =============================== 1250 너비 적용 구간================= */
 main .bg1 .width_area {padding: 0 0 40px 30px;}
 main .bg1 .width_area h2 {
@@ -495,6 +496,7 @@ main .bg12 .width_area .ft_wrap .ft_contents dl dd {font-weight: 700; line-heigh
 main .bg12 .width_area .ft_wrap .ft_contents dl dd:last-child {margin-top: 20px;}
 main .bg12 .width_area .ft_wrap .ft_contents dl dd address {font-weight: 700;}
 main .bg12 .width_area .ft_wrap .ft_contents dl dd a {font-weight: 700; color: #8C8B92;}
+main .bg12 .width_area .ft_wrap .ft_contents dl dd a:hover {color: #BBB;}
 main .bg12 .width_area .ft_wrap .ft_contents .ft_snb {}
 main .bg12 .width_area .ft_wrap .ft_contents .ft_snb dt {font-weight: 700;}
 main .bg12 .width_area .ft_wrap .ft_contents .ft_snb dd { margin-bottom: 20px;}
