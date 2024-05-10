@@ -15,7 +15,7 @@ main .bg section .sub_title {
     font-weight: 500; color: #FFF; line-height: 1.2;
 }
 main .bg section .sponsor_link::after {
-    /* 존재하지 않는 요소. CSS로 디자인에 활욜할 때 사용함 */
+    /* 존재하지 않는 요소. CSS로 디자인에 활용할 때 사용함 */
     content:'';
     background-image:url(../images/btn_right_arrow.svg);
     background-repeat:no-repeat;
