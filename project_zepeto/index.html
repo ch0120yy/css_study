@@ -7,13 +7,21 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZEPETO Studio</title>
+    <!-- 웹폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS 적용 -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <!-- font-awesome 적용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <h1 class="logo"><a href="#"><img src="./images/logo_zepeto_white.png" alt="ZEPETO"></a></h1>
+        <h1 class="logo"><a href="#"><img src="./images/logo_zepeto_white.png" alt="zepeto"></a></h1>
         <nav id="gnb">
             <a href="#">콘텐츠</a>
             <a href="#">크리에이터 프로그램</a>
@@ -21,19 +29,112 @@
             <a href="#">가이드</a>
             <a href="#">지원</a>
         </nav>
-        <div class="contents">
+        <div class="snb">
             <a href="#">콘텐츠 관리</a>
-            <a href="#"><img src="./images/bell-regular.svg" alt="알림"></a>
+            <a href="#"><img src="./images/bell-regular.svg" alt="알림 서비스"></a>
         </div>
     </header>
     <main>
-        <div class="main_bg">
+        <!-- 1. 동영상 시작하기 -->
+        <div class="visual">
             <video src="./images/bg.mp4" autoplay muted loop>
             </video>
-            <h2>상상하는 모든 것.<br>제페토 스튜디오에서</h2>
-            <a href="#" class="start_btn">시작하기</a>
+            <div class="visual_title">
+                <h2>상상하는 모든 것.<br>제페토 스튜디오에서</h2>
+                <a href="#" class="start_link">시작하기</a>
+            </div>
         </div>
+        <!-- 2. 크리에이터 -->
+        <div class="creator">
+            <h2>크리에이터를 위한 제페토.</h2>
+            <p>
+                제페토 크리에이터는 제페토 세상의 모든 것을 직접 만들 수 있습니다.<br>
+                전 세계 3억 유저에게 당신의 아이디어를 보여주세요!
+            </p>
+            <p class="img"><img src="./images/img_creators.png" alt=""></p>
+            <div class="contents">
+                <dl>
+                    <dt>6800만</dt>
+                    <dd>스튜디오 아이템 판매량</dd>
+                </dl>
+                <dl>
+                    <dt>230만</dt>
+                    <dd>스튜디오 크리에이터 수</dd>
+                </dl>
+                <dl>
+                    <dt>3억</dt>
+                    <dd>제페토 가입자 수</dd>
+                </dl>
+            </div> <!-- e:contents -->
+        </div> <!-- e:creator -->
+        <!-- 3. 제페토 세상 -->
+        <div class="world">
+            <section class="contents_wrap">
+                <h2>제페토 세상이 내 손안에.</h2>
+                <p>
+                    아이템, 월드, 라이브까지.<br>
+                    제페토는 크리에이터가 아이디어를 펼칠 수 있는 최고의 플랫폼입니다.
+                </p>
+                <div class="contents">
+                    <dl>
+                        <dt>아이템</dt>
+                        <dd>패션 아이템을 만들고<br>수익을 창출하세요.</dd>
+                        <dd class="view_more"><a href="#">더 알아보기</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>월드</dt>
+                        <dd>제페토 세상에<br>내 아이디어가 담긴<br>월드를 만드세요</dd>
+                        <dd class="view_more"><a href="#">더 알아보기</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>라이브</dt>
+                        <dd>전 세계 유저들과<br>실시간 방송하세요.</dd>
+                        <dd class="view_more"><a href="#">더 알아보기</a></dd>
+                    </dl>
+                </div> <!-- e:contents_box -->
+            </section> <!-- e:contents_wrap -->
+        </div> <!-- e:world -->
+        <!-- 3억 명 제페토 -->
+        <div class="million">
+            <h2>3억 명을 사로잡을 크리에이터가 될 기회.</h2>
+            <p>
+                230만이 넘는 제페토 크리에이터가 전 세계 3억 유저에게 아이디어를 선보이고 있습니다<br>
+                제페토의 대표 크리에이터를 바로 만나보세요.
+            </p>
+            <div class="profile">
+                <img src="./images/img_slider_01.png" alt="">
+                <img src="./images/img_slider_02.png" alt="">
+                <img src="./images/img_slider_03.png" alt="">
+                <img src="./images/img_slider_04.png" alt="">
+                <img src="./images/img_slider_05.png" alt="">
+            </div>
+        </div> <!-- e:million -->
     </main>
+    <!-- ================= footer -->
+    <div class="f_bg">
+        <footer>
+            <div class="f_top">
+                <div class="f_menu">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">문의하기</a>
+                    <a href="#">Credits</a>
+                </div>
+                <div class="lang_sns">
+                    <!-- 모든 사용자에 같은 결과를 보여주는 경우는 form 양식으로 서버 전달 필요가 없으므로 사용할 필요 없음 -->
+                    <select name="lang_select" id="lang_select">
+                        <option value="kr">한국어</option>
+                        <option value="en">English</option>
+                    </select>
+                    <a href="#" class="sns"><img src="./images/sns_icon_insta.svg" alt="instagram"></a>
+                    <a href="#" class="sns"><img src="./images/sns_icon_tiktok.svg" alt="tiktok"></a>
+                    <a href="#" class="sns"><img src="./images/sns_icon_twitter.svg" alt="twitter"></a>
+                    <a href="#" class="sns"><img src="./images/sns_icon_youtube.svg" alt="youtub"></a>
+                </div>
+            </div>
+            <p class="copy">&copy; NAVER Z Corp. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 
 </html>

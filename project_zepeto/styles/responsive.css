@@ -1,0 +1,42 @@
+/* 반응형웹 */
+/* 기존 CSS에서 변경되는 사항만 작성한다 */
+/* media 조건 시작값 max 기준 사이트 너비값을 주로 이용 */
+@media screen and (max-width:1300px){
+    header nav {display: none;}
+    main .visual video {width:1300px;}
+    /* =========== 2.크리에이터 */
+    main .creator {width: 100%}
+    /* =========== 3.제페토 세상 */
+    main .world .contents_wrap {width: 100%;}
+    /* =========== 3.3억 명 */
+    main .million {width:100%;}
+    main .million .profile img {width:calc((100% / 4) - 10px);}
+    main .million .profile img:last-child {display:none;}
+    /* footer */
+    .f_bg footer {padding:0 16px}
+    } /* ~1300px */
+@media screen and (max-width:760px){
+    header h1 {width: 225.75px;}
+    /* =========== 2.크리에이터 */
+    main .creator .img {width: 100%;}
+    main .creator .contents {flex-flow: row wrap;}
+    main .creator .contents dl {width: calc(100% / 2);}
+    main .creator .contents dl:last-child {width:100%;}
+    /* =========== 3.제페토 세상 */
+    main .world .contents_wrap .contents {flex-flow: column;}
+    main .world .contents_wrap .contents dl {
+        width: 100%; height: 150px; padding: 0 50px;
+        display: flex; flex-flow: row wrap;
+        justify-content: space-between; align-items: center;
+    }
+    main .world .contents_wrap .contents dl dt+dd {margin:0;}
+    main .world .contents_wrap .contents dl:nth-child(2) {margin: 10px 0;}
+    /* =========== 3.3억 명 */
+    main .million h2 {font-size:2.188rem;}
+    main .million p {font-size:1.0rem;}
+    main .million .profile img {width:calc((100% / 3) - 10px);}
+    main .million .profile img:nth-last-child(2) {display:none;}
+    /* footer */
+    .f_bg footer .f_top {flex-flow:column;}
+    .f_bg footer .f_top .f_menu {margin-bottom:10px}
+    } /* ~760px */

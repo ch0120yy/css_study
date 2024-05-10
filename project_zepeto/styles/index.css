@@ -1,0 +1,162 @@
+header {
+    /* figma:1920(full) 1920px(X) 100%(O) */
+    /* width:100%;(block 요소의 기본값) */
+    /* min-width: (320px~360px); max-width: (100%); */
+    min-width: 360px;
+    height: 80px; padding: 0 16px;
+    background-color: #000;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items: center;
+}
+header h1 {
+    width: 301px;
+    /* img태그가 들어가는 부모 요소에 크기 입력 시 꼭 필요한 경우가 아니라면 width, height 둘 다 입력하지 않고
+    width 값만 입력하여 height값은 비율에 맞게 자동으로 설정되게 처리하는 것을 추천함 */
+}
+header h1 a {}
+header h1 a img {
+    /* img태그는 inline태그여도 원본 이미지 px 고유값을 가지고 있기 때문에 
+    부모의 크기가 변경돼도 상대값으로 따라가지 않음 */
+    width: 100%; /* 부모 크기를 따라가게 입력 */
+}
+header nav {}
+header nav a {
+    margin-right: 24px;
+    color: #FFF; font-size: 1.25rem;
+}
+header nav a:last-child {margin:0;}
+/* a 상태선택자 : (동적) 마우스 올렸을 때 :hover */
+header nav a:hover {color:#BBB;}
+header .snb {
+    display: flex;
+    align-items: center;
+}
+header .snb a {
+    display: flex;
+}
+header .snb a:first-child {
+    color: #FFF; font-size: 1.25rem;
+    border: 2px solid #FFF; border-radius: 5px;
+    padding: 0 10px; line-height: 39px; margin-right: 24px;
+}
+header .snb a:last-child {
+    width: 36px;
+    /* display:inline-block; 부모가 flex 설정되면 생략 가능! */
+}
+header .snb a img {width: 100%; filter:invert(1);}
+header .snb a:first-child:hover {border-color: #ff0;}
+header .snb a:last-child:hover img {filter: invert(1) opacity(50%);}
+/* =========================== main1. 영상, 시작하기 버튼 위치 */
+main {}
+main .visual {
+    height: 720px;
+    overflow: hidden;
+    position: relative;
+}
+main .visual video {width: 100%;}
+main .visual .visual_title {
+    position: absolute; left: 0; top: 228px;
+    width: 100%; text-align: center;
+    /* 겹치는 형제요소 디자인작읍을 위한 absolute */
+    /* 1. 겹치는 대상에 absolute 설정 후 부모확인을 위해 left:0; top:0; 초기값 설정 (부모의 왼쪽 위로 배치) */
+    /* 2. 배치된 위치가 원하는 부모 위치가 아닐 때 -> 원하는 부모 대상에 position 추가 속성을 용해서 부모 설정하기 */
+}
+main .visual .visual_title h2 {
+    font-size: 3rem; font-weight: 700;
+    line-height: 1.4; color: #FFF; margin: 0 0 70px;
+}
+main .visual .visual_title .start_link {
+    background-color: #000; color: #FFF;
+    display: inline-block;
+    width: 160px; line-height: 54px; border-radius: 10px;
+}
+main .visual .visual_title .start_link:hover {border-radius: 50px;}
+/* ================================== main2.크리에이터 */
+main .creator {
+    width: 1300px;
+    margin: 150px auto 0;
+    text-align: center; /* 자식, 자손 글자 공통 정렬 */
+}
+main .creator h2 {
+    font-size: 3rem; font-weight: 700;
+}
+main .creator h2+p {
+    font-size: 1.25rem; line-height: 1.5;
+    margin: 55px 0;
+}
+main .creator .img {width:697px; margin:0 auto 55px;}
+main .creator .img img {width: 100%;}
+main .creator .contents {
+    display: flex; flex-flow: row nowrap;
+}
+main .creator .contents dl {width:calc(100% / 3);}
+main .creator .contents dl dt {font-size: 2rem; font-weight: 700;}
+main .creator .contents dl dd {font-size: 1.25rem; margin: 16px 0 0;}
+main .world {
+    background-color: #F5F5F5;
+    padding: 150px 0; margin: 150px 0 0;
+}
+main .world .contents_wrap {
+    width: 1300px;
+    margin: 0 auto; text-align: center;
+}
+main .world .contents_wrap h2 {font-size: 3rem; font-weight: 700;}
+main .world .contents_wrap p {
+    font-size:1.25rem; line-height:1.5; margin:50px 0;
+}
+main .world .contents_wrap .contents {
+    padding: 0 16px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+}
+main .world .contents_wrap .contents dl {
+    background-color: #FFF;border-radius: 15px;
+    width:calc(100% / 3 - 20px); height: 350px;
+    /* 내용 높낮이가 다르므로 높이 고정 */
+    padding: 60px 0 0;
+}
+main .world .contents_wrap .contents dl dt {font-size: 1.5rem; font-weight: 700;}
+main .world .contents_wrap .contents dl dt+dd {line-height: 1.7; margin: 40px 0;}
+main .world .contents_wrap .contents dl .view_more {}
+main .world .contents_wrap .contents dl .view_more a {
+    background-color: #000; color: #FFF;
+    display: inline-block; line-height: 54px; padding: 0 25px;
+    border-radius: 20px;
+}
+/* =============== 4. 3억 명 */
+main .million {
+    width:1300px; margin:150px auto; 
+    text-align: center;
+}
+main .million h2 {font-size: 3rem; font-weight: 700;}
+main .million p {font-size:1.25rem; line-height:1.5; margin:50px 0;}
+main .million .profile {
+    padding:0 16px;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between;
+}
+main .million .profile img {width: 240px;}
+/* =============== 5. footer */
+.f_bg {background-color:#F5F5F5; padding:80px 0;}
+.f_bg footer {max-width: 1300px; margin: 0 auto;}
+.f_bg footer .f_top {
+    margin-bottom:24px;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between;
+}
+.f_bg footer .f_top .f_menu {}
+.f_bg footer .f_top .f_menu a {margin-left:24px;}
+.f_bg footer .f_top .f_menu a:first-child {margin:0;}
+.f_bg footer .f_top .lang_sns {display:flex; align-items:center;}
+.f_bg footer .f_top .lang_sns #lang_select {
+    appearance: none; outline: none;
+    line-height:25px; padding: 0 15px 0 10px; border-radius:5px;
+    background-image:url(../images/lang_down.svg);
+    background-repeat:no-repeat;
+    background-size:14px; 
+    background-position: 57px 1px;
+}
+.f_bg footer .f_top .lang_sns #lang_select option {}
+.f_bg footer .f_top .lang_sns .sns {margin-left: 12px; width:24px;}
+.f_bg footer .f_top .lang_sns .sns img {width:100%;}
+.f_bg footer .copy {}
