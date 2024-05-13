@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        header {
+            min-width: 360px;
+            background-color: #000;
+            height: 80px; padding: 0 16px;
+            display: flex; flex-flow: row nowrap;
+            justify-content: space-between; align-items: center;
+        }
+        header h1 {width: 301px;}
+        header h1 a {}
+        header h1 a img {width:100%}
+        header nav {}
+        header nav a {color: #FFF; font-size: 1.25rem; margin-right: 24px;}
+        header nav a:hover {color: #BBB;}
+        header nav a:last-child {margin:0;}
+        header .snb {display: flex; align-items: center;}
+        header .snb a {}
+        header .snb a:first-child {
+            color: #FFF; margin-right: 24px;
+            line-height: 39px; padding: 0 16px;
+            font-size: 1.25rem; border: 2px solid #FFF; border-radius: 5px;
+        }
+        header .snb a:last-child {
+            width: 36px;
+        }
+        header .snb a img {width: 100%; filter: invert(1);}
+        /* hover 적용 구간 */
+        header .snb a:first-child:hover {color: #BBB; border-color: #BBB;}
+        header .snb a:last-child:hover img {filter: invert(1) opacity(80%);}
+        main {}
+        main .visual {
+            height: 720px;
+            overflow: hidden;
+            position:relative;
+        }
+        main .visual video {width: 100%;}
+        main .visual .visual_title {
+            position: absolute; left: 0; top:228px;
+            width: 100%;  text-align: center;
+        }
+        main .visual .visual_title h2 {
+            font-size: 3rem; color: #FFF;
+            line-height: 1.4; font-weight: 700;
+            margin: 0 0 70px;
+        }
+        main .visual .visual_title .start_link {
+            display: inline-block;
+            background-color: #000; color: #FFF;
+            width: 160px; line-height: 54px; border-radius: 10px;
+        }
+        main .visual .visual_title .start_link:hover {background-color: #3b3b3b;}
+        main .creator {
+            width: 1300px;
+            margin: 150px auto 0;
+            text-align: center;
+        }
+        main .creator h2 {
+            font-size:3rem; font-weight:700;
+        }
+        main .creator h2+p {
+            font-size:1.25rem; margin:55px 0;
+        }
+        main .creator .img {width:697px; margin: 0 auto 55px;}
+        main .creator .img img {width: 100%;}
+        main .creator .studio {
+            display: flex; flex-flow:row nowrap;
+        }
+        main .creator .studio dl {width:calc(100% / 3);}
+        main .creator .studio dl dt {font-size: 2rem; font-weight:700;}
+        main .creator .studio dl dd {margin: 16px 0 0;}
+
+        /* 반응형웹 적용 */
+        @media screen and (max-width:1300px) {
+            header nav {display:none;}
+            main .visual video {width:1300px;}
+            /* ============ 2.크리에이터 */
+            main .creator {width: 100%;}
+            main .creator .studio dl {width:calc(100% / 3);}
+        } /* ~1300px */
+        @media  screen and (max-width:760px) {
+            header h1 {width: 225.75px;}
+            /* ============ 2.크리에이터 */
+            main .creator .img {width: 100%;}
+            main .creator .studio {flex-flow:row wrap;}
+            main .creator .studio dl {width:calc(100% / 2);}
+            main .creator .studio dl:last-child {width: 100%;}
+        } /* ~760px */
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><img src="./images/logo_zepeto_white.png" alt="zepeto"></a></h1>
+        <nav>
+            <a href="#">콘텐츠</a>
+            <a href="#">크리에이터 프로그램</a>
+            <a href="#">비즈니스</a>
+            <a href="#">가이드</a>
+            <a href="#">지원</a>
+        </nav>
+        <div class="snb">
+            <a href="#">콘텐츠 관리</a>
+            <a href="#"><img src="./images/bell-regular.svg" alt="알림 서비스"></a>
+        </div>
+    </header>
+        <main>
+            <div class="visual">
+                <video src="./images/bg.mp4" autoplay muted loop></video>
+                <div class="visual_title">
+                    <h2>상상하는 모든것.<br>제페토 스튜디오에서</h2>
+                    <a href="" class="start_link">시작하기</a>
+                </div>
+            </div>
+            <div class="creator">
+                <h2>크리에이터를 위한 제페토.</h2>
+                <p>
+                    제페토 크리에이터는 제페토 세상의 모든 것을 직접 만들 수 있습니다.<br>
+                    전 세계 3억 유저에게 당신의 아이디어를 보여주세요!
+                </p>
+                <p class="img"><img src="./images/img_creators.png" alt=""></p>
+                <div class="studio">
+                    <dl>
+                        <dt>6800만</dt>
+                        <dd>스튜디오 아이템 판매량</dd>
+                    </dl>
+                    <dl>
+                        <dt>230만</dt>
+                        <dd>스튜디오 크리에이터 수</dd>
+                    </dl>
+                    <dl>
+                        <dt>3억</dt>
+                        <dd>제페토 가입자 수</dd>
+                    </dl>
+                </div> <!-- e:studio -->
+            </div> <!-- e:creator -->
+            <div class="world">
+                <section class="contents_wrap">
+                    <h2>제페토 세상이 내 손안에.</h2>
+                    <p>아이템, 월드, 라이브까지.<br></p>
+                </section>
+            </div>
+        </main>
+</body>
+</html>
