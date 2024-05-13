@@ -30,12 +30,16 @@
             width:100px; margin:0 10px; 
             display:flex; align-items:flex-end;
         }
-        #v_btn a img {width:100%;}
+        #v_btn a img {
+            width:100%;
+            /* transform:rotate(0); 기본 값과 동일한 경우는 작성하지 않아도 됨 */
+            transform-origin:right bottom;
+            transition:transform .3s;
+        }
+        #v_btn a:hover img {transform:rotate(15deg);}
     </style>
     <script>
         window.onload=function(){
-
-            
 
         }//e:onload
     </script>
