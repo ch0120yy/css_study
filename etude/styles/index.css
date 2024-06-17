@@ -1,0 +1,27 @@
+/* ----------------------------- 공통 영역 */
+body {width:1920px;}
+/* ----------------------------- 헤더 영역 */
+#gnb_area {}
+#gnb_area #logo {}
+#gnb_area #logo a {}
+#gnb_area #logo a img {}
+#gnb_area .gnb_g {}
+#gnb_area .gnb_g li {}
+#gnb_area .gnb_g li a {}
+#gnb_area .menu_g {}
+#gnb_area .menu_g a {}
+#gnb_area .menu_g a img {}
+/* ----------------------------- main 영역 */
+main {}
+main .main_banner {}
+main .main_banner .banner_area {}
+main .main_banner .banner_area .prev_btn {}
+main .main_banner .banner_area .prev_btn a {}
+main .main_banner .banner_area .prev_btn a img {}
+main .main_banner .banner_area .banner_cont {}
+main .main_banner .banner_area .banner_cont h2 {}
+main .main_banner .banner_area .banner_cont p {}
+main .main_banner .banner_area .next_btn {}
+main .main_banner .banner_area .next_btn a {}
+main .main_banner .banner_area .next_btn a img {}
+main .main_banner .banner_area .nav_bar {}
